@@ -129,37 +129,95 @@ Science \sep Publication \sep Complicated
 \section{Introduction}
 \label{S:1}
 
+\begin{itemize}
+\item Risk and uncertainty
+\item One rule for all?
+\item Impact of life histories
+\item Comparision of constant catch v changing catch based on trends in an empirical index. 
+\end{itemize}
+
+
 There is a growing need for the development of innovative approaches so that management of all marine stocks not just those of high commercial value can be included into the Common Fisheries Policy (CFP) framework. Management objectives under the CFP are to recover stocks and to maintain stocks within safe biological limits, including by-catch species. These conservation measures can include biological target reference points e.g. and/or population size (stock biomass), yields (catches), long–term yields and fishing mortality against which the preservation of stocks within such limits are assessed. These are often referred to as management procedures or harvesting strategies which include the operational component harvest control rule (HCR) based on indicators (e.g. monitoring data or models) of stock status. To test the performance of candidate management strategies often requires evaluation of alternative hypothesis about the dynamics of the system e.g. population dynamics (e.g. life history dynamics) and the behaviour of the fishery (e.g range contraction and density dependence) etc..  Due to the nature of conflicting objectives, stakeholder interests and the uncertainty in the dynamics of the resource and/ or the plausibility of alternative hypotheses can lead to poor decision making and can be problematic when defining management policy.
 
-An intense area of work being researched over the last 2 decades is Management Strategy Evaluation (MSE), which focuses on the broader aspects of fishing (the Ecosystem) whereby different management options are tested against a range of objectives (see Kell et al., 2007).  The approach is not to come up with a definitive answer, but to lay-bare the trade offs associated with each management objective, along with identifying and incorporating uncertainties in the evaluation and communicating the results effectively to client groups and decision-makers. MSE is not intended to be complex but to provide a robust framework that account for conflicting poorly defined objectives and uncertainties that have been absent in conventional management (Kell et al., 2007).  
+An intense area of work being researched over the last 2 decades is Management Strategy Evaluation (MSE), which focuses on the broader aspects of fishing (the Ecosystem) whereby different management options are tested against a range of objectives \cite{kell2007flr}.  The approach is not to come up with a definitive answer, but to lay-bare the trade offs associated with each management objective, along with identifying and incorporating uncertainties in the evaluation and communicating the results effectively to client groups and decision-makers. MSE is not intended to be complex but to provide a robust framework that account for conflicting poorly defined objectives and uncertainties that have been absent in conventional management (Kell et al., 2007).  
 To better understand the performance of a range of management procedures we aim to test generic empirical HCR (based on catch per unit effort – CPUE indices) that maximises yield without stock collapse for ICES data-limited fisheries. 
 
 Often empirical harvest control rules require extensive exhaustive parameter searches to tune hyper-parameters that aren’t directly learnt from estimators.  This requires a technique known as a grid search that extensively searches for all combinations of all parameters. In contrast and some what less time consuming, other efficient parameter search strategy’s can be considered given range of parameter space and a known distribution a sample can be obtained and is known as a random search.  
 
 To test case specific harvest strategies (via simulation) within the MSE, we will implement a management procedure based on a empirical model that adjusts yield depending on stock status for a given range set of hype-parameters for the harvest strategy and test their robustness to uncertainty.  This approach could also help identify similar conditions across species where particular advice rules are likely to work well, and where they perform poorly for a given a set of hyper-parameters. Assessment is made as to the performance of each HCR via a set of utilities: safety (a proportion $B/B_{MSY} >1$), yield (a proportion- $yield/MSY$), kobe proportion (proportion of years that stay in the green zone of kobe plot ($B/B_{MSY} >1$), and Yield Annual Variation (yield changes by 10\% year on year).  
 
+
+\section{Material and Methods}
+\subsection{Materials}
+
+Fishnets
+
+\subsection{Methods}
+
+MSE
+
+\subsubsection{Operating Model}
+
+Age based.
+
+\subsubsection{Management Procedure}
+
+The management procedure was based on an empirical MP, where an increase in an index of abundance resulted in an increase in the TAC, while a decrease in the index results in an decrease in the TAC.
+
+\subsubsection{Random Search}
+
+%https://stats.stackexchange.com/questions/160479/practical-hyperparameter-optimization-random-vs-grid-search
+
+When running an MSE commonly a set of MP scenarios are run to tune the MP, this requires running the MSE for each OM scenario for a range of fixed values in the HCR and then choosing the rule that best meets management objectives. If there are a lot of parameters to tune then a grid search may become unfeasible. An alternative is random search \cite{bergstra2012random} as randomly chosen trials are more efficient for parameter optimisation than trials based on a grid. 
+
+%For example any distribution over a sample space with a finite maximum, the maximum of 60 random observations lies within the top 5\% of the true maximum, with 95\% probability.  Imagine the 5\% interval around the true maximum. Now imagine that we sample points from his space and see if any of it lands within that maximum. Each random draw has a 5\% chance of landing in that interval, if we draw n points independently, then the probability that all of them miss the desired interval is (1−0.05)n So the probability that at least one of them succeeds in hitting the interval is 1 minus that quantity. We want at least a .95 probability of success. To figure out the number of draws we need, just solve for n in the equation: 1−(1−0.05)^n>0.95 We get n⩾60
+  
+\section{Results}
+
+\begin{itemize}
+\item Figure \ref{fig:lh} shows the life history parameters
+\item Figure \ref{fig:vectors} shows the vectors
+\item Figure \ref{fig:ts} shows the time series relative to reference points
+\item Figure \ref{fig:pm} shows the performance statistics; points are
+\begin{enumerate}
+ \item ~
+ \item ~
+ \item ~
+ \item ~\item Figure \ref{fig:util} shows the utility functions for the seven study stocks points area
+\end{enumerate}
+\begin{enumerate}
+ \item ~
+ \item ~
+ \item ~
+ \item ~
+\end{enumerate}
+
+\end{itemize}
+
+\section{Discussion}
+
+
 \begin{itemize}
 \item Bullet point one
 \item Bullet point two
 \end{itemize}
 
-
-\section{Material and Methods}
-\subsection{Materials}
-\subsection{Methods}
-\subsubsection{Operating Model}
-\subsubsection{Management Procedure}
-
-\subsubsection{Random Search}
-
-
-\section{Results}
-\section{Discussion}
 \section{Conclusions}
 
+\begin{itemize}
+\item Bullet point one
+\item Bullet point two
+\end{itemize}
+
+\section{References}
 
 \bibliographystyle{model1-num-names}
 \bibliography{/home/laurence/Desktop/flr/equations/tex/refs.bib} 
+
+\section{Figures}
+
+\begin{figure}[]\centering\includegraphics[width=5in]{util.png}\caption{}\label{fig:util}\end{figure}
+
 
 %% Authors are advised to submit their bibtex database files. They are
 %% requested to list a bibtex style file in the manuscript if they do
