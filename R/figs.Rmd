@@ -1,0 +1,212 @@
+---
+title: "Random Grid"
+subtitle: "Figs"
+author: "L Kell & A Tidd"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+```{r, knitr, eval=TRUE, echo=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(knitr)
+
+opts_chunk$set(comment   =NA, 
+               warning   =FALSE, 
+               message   =FALSE, 
+               error     =FALSE, 
+               echo      =FALSE,
+               fig.width =10, 
+               fig.height=10,
+               cache     =TRUE, 
+               fig.path  ="../tex/rg-",
+               cache.path="../cache/rg/")
+
+iFig=0
+iTab=0
+```
+```{r, dir}
+dirMy=dirname(dirname(FLife:::getScriptPath()))
+#dirMy="/home/laurence/Desktop/sea++/mydas/tasks/task4"
+dirDat="/home/laurence/Desktop/Dropbox/mydasOMs/data"
+dirRes="/home/laurence/Desktop/Dropbox/mydasOMs/results"
+```
+```{r, pkgs}
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(reshape)
+library(GGally)
+
+library(FLCore)
+library(FLBRP)
+library(FLasher)
+library(ggplotFL)
+library(FLife)
+```
+
+## Life history parameters
+
+```{r, lh}
+load(file.path(dirDat,"brill.RData"))
+nms=dimnames(lh)$params[-17]
+par=FLPar(apply(lh,1,mean)[nms])
+load(file.path(dirDat,"turbot.RData"))
+par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
+load(file.path(dirDat,"ray.RData"))
+par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
+load(file.path(dirDat,"pollack.RData"))
+par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
+load(file.path(dirDat,"sprat.RData"))
+par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
+load(file.path(dirDat,"lobster.RData"))
+par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
+load(file.path(dirDat,"razor.RData"))
+par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
+dimnames(par)$iter=c("brill","turbot","ray","pollack","sprat","lobster","razor")
+lh=par
+rm(par)
+
+save(lh,file="/home/laurence/Desktop/sea++/mydas/project/papers/randomGrid/data/lh.RData")
+```
+
+```{r, priors}
+load(file.path(dirDat,"brill.RData"))
+pr=cbind(spp="brill",model.frame(prior))
+load(file.path(dirDat,"turbot.RData"))
+pr=rbind.fill(pr,cbind(spp="turbot",model.frame(prior)))
+load(file.path(dirDat,"ray.RData"))
+pr=rbind.fill(pr,cbind(spp="ray",model.frame(prior)))
+load(file.path(dirDat,"pollack.RData"))
+pr=rbind.fill(pr,cbind(spp="pollack",model.frame(prior)))
+load(file.path(dirDat,"sprat.RData"))
+pr=rbind.fill(pr,cbind(spp="sprat",model.frame(prior)))
+load(file.path(dirDat,"lobster.RData"))
+pr=rbind.fill(pr,cbind(spp="lobster",model.frame(prior)))
+load(file.path(dirDat,"razor.RData"))
+pr=rbind.fill(pr,cbind(spp="razor",model.frame(prior)))
+
+params=pr
+rm(pr)
+
+k=ddply(params,.(spp), with, mean(k))
+ord=ac(k[order(k$V1),"spp"])
+params$spp=factor(params$spp,levels=ord)
+save(params,file="/home/laurence/Desktop/sea++/mydas/project/papers/randomGrid/data/params.RData")
+```
+
+
+```{r, lhpar, fig.height=3}
+ggplot(transform(melt(params[,c("spp","linf","k","a50")]),
+                 variable=factor(variable,level=c("k","linf","a50"))))+
+  geom_boxplot(aes(spp,value))+facet_wrap(~variable,scale="free")
+```
+
+```{r, derived, fig.height=8}
+ggplot(transform(melt(params[,c("spp","spr0","lopt","r","rc","fm","mk","bmsy")]),
+                 variable=factor(variable,
+                          level=c("r","rc","spr0","lopt","fm","mk","bmsy"))))+
+  geom_boxplot(aes(spp,value))+facet_wrap(~variable,scale="free")
+```
+
+
+## Equilibrium dynamics
+
+The parameters are then used by `lhEql` to simulate the equilibrium dynamics by combining the spawner/yield per recruit relationships with a stock recruiment relationship.
+
+```{r, eqRun}
+eq=lhEql(lh,spwn=0)
+```
+
+
+```{r vectors}
+sel<-function(x) 
+  catch.sel(x)%/%fapex(catch.sel(x))
+
+dat=FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Mass"=stock.wt)
+
+ggplot(subset(as.data.frame(dat),age<=10))+
+  geom_line(aes(age,data,col=dimnames(lh)$iter[iter]))+
+  facet_wrap(~qname,scale="free")+
+  scale_x_continuous(limits=c(0,10))+
+  xlab("Age")+ylab("")+
+  theme(legend.position="bottom")
+```
+
+**Figure `r iFig=iFig+1; iFig`** Vectors.
+
+
+```{r, eq}
+plot(eq,refpts=FALSE)  
+```
+
+**Figure `r iFig=iFig+1; iFig`** Equilibrum Curves.
+
+## Population dynamics
+
+```{r om}
+#http://www.fishbase.org/manual/Key%20Facts.htm
+
+gTime=aaply(lh,2,function(x) round(FLife:::genTime(FLPar(x))))
+
+fbar=as.FLQuant(mdply(data.frame(iter=1:7), function(iter) 
+                   data.frame(year=1:105,
+                              data=c(rep(.1,19),seq(.1,2,length.out=30),
+                                                seq(2.0,1,length.out=gTime[iter])[-1],
+                                                rep(1,61))[1:105])))
+
+eq@fbar=fbar%*%refpts(eq)["msy","harvest"]
+
+om=as(eq,"FLStock")
+om=fwd(om,f=fbar(om)[,-1],sr=eq)
+lh=par
+save(lh,eq,om,file=file.path(dirDat,"om7.RData"),compress="xz")
+
+plot(om)
+```
+
+**Figure `r iFig=iFig+1; iFig`** Time series.
+
+```{r ts}
+dat=as.data.frame(FLQuants(om, 
+          "ssb" = function(x) ssb(x)%/%refpts( eq)["msy","ssb"], 
+          "f" =   function(x) fbar(x)%/%refpts(eq)["msy","harvest"], 
+          "rec" = function(x) rec(x)%/%refpts( eq)["msy","rec"], 
+          "catch"=function(x) landings(x)%/%refpts(eq)["msy","yield"]))
+ggplot(subset(dat,year<75))+
+  geom_line(aes(year,data,group=iter))+
+  geom_hline(aes(yintercept=1),col="red")+
+  facet_grid(qname~.)+
+  xlab("Year")+ylab("")
+```
+
+**Figure `r iFig=iFig+1; iFig`** Time series relative to MSY benchmarks.
+
+\newpage
+## Software Versions
+
+* `r version$version.string`
+* FLCore:    `r packageVersion('FLCore')`
+* FLBRP:     `r packageVersion('FLBRP')`
+* FLasher:   `r packageVersion('FLasher')`
+* FLife:     `r packageVersion('FLife')`
+* ggplotFL:  `r packageVersion('ggplotFL')`
+* **Compiled**: `r date()`
+
+## Author information
+
+**Laurence Kell**. laurie@seaplusplus.es
+
+## Acknowledgements
+
+This vignette and many of the methods documented in it were developed under the MyDas project funded by the Irish exchequer and EMFF 2014-2020. The overall aim of MyDas is to develop and test a range of assessment models and methods to establish Maximum Sustainable Yield (MSY) reference points (or proxy MSY reference points) across the spectrum of data-limited stocks.
+
+# References {#References}
+
+\newpage
+# Session Info
+
+```{r}
+sessionInfo()
+```
+
