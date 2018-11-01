@@ -59,11 +59,11 @@ load(file.path(dirDat,"pollack.RData"))
 par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
 load(file.path(dirDat,"sprat.RData"))
 par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
-load(file.path(dirDat,"lobster.RData"))
-par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
-load(file.path(dirDat,"razor.RData"))
-par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
-dimnames(par)$iter=c("brill","turbot","ray","pollack","sprat","lobster","razor")
+#load(file.path(dirDat,"lobster.RData"))
+#par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
+#load(file.path(dirDat,"razor.RData"))
+#par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
+dimnames(par)$iter=c("brill","turbot","ray","pollack","sprat") #,"lobster","razor")
 lh=par
 rm(par)
 
@@ -81,10 +81,10 @@ load(file.path(dirDat,"pollack.RData"))
 pr=rbind.fill(pr,cbind(spp="pollack",model.frame(prior)))
 load(file.path(dirDat,"sprat.RData"))
 pr=rbind.fill(pr,cbind(spp="sprat",model.frame(prior)))
-load(file.path(dirDat,"lobster.RData"))
-pr=rbind.fill(pr,cbind(spp="lobster",model.frame(prior)))
-load(file.path(dirDat,"razor.RData"))
-pr=rbind.fill(pr,cbind(spp="razor",model.frame(prior)))
+#load(file.path(dirDat,"lobster.RData"))
+#pr=rbind.fill(pr,cbind(spp="lobster",model.frame(prior)))
+#load(file.path(dirDat,"razor.RData"))
+#pr=rbind.fill(pr,cbind(spp="razor",model.frame(prior)))
 
 params=pr
 rm(pr)
@@ -144,10 +144,10 @@ plot(eq,refpts=FALSE)
 
 ## Population dynamics
 
-```{r om}
+```{r om, eval=FALSE}
 #http://www.fishbase.org/manual/Key%20Facts.htm
 
-gTime=aaply(lh,2,function(x) round(FLife:::genTime(FLPar(x))))
+gTime=10 #aaply(lh,2,function(x) round(FLife:::genTime(FLPar(x))))
 
 fbar=as.FLQuant(mdply(data.frame(iter=1:7), function(iter) 
                    data.frame(year=1:105,
@@ -167,7 +167,7 @@ plot(om)
 
 **Figure `r iFig=iFig+1; iFig`** Time series.
 
-```{r ts}
+```{r ts, eval=FALSE}
 dat=as.data.frame(FLQuants(om, 
           "ssb" = function(x) ssb(x)%/%refpts( eq)["msy","ssb"], 
           "f" =   function(x) fbar(x)%/%refpts(eq)["msy","harvest"], 
