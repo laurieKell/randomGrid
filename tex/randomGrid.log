@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  1 NOV 2018 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  2 NOV 2018 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,13 +292,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.157 ... 2004/585/EC. Off J Eur Union L 354:22−
+l.156 ... 2004/585/EC. Off J Eur Union L 354:22−
                                                   61
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-Overfull \hbox (0.56837pt too wide) in paragraph at lines 157--165
+Overfull \hbox (0.56837pt too wide) in paragraph at lines 156--164
 \OT1/cmr/m/n/12 and re-peal-ing Coun-cil Reg-u-la-tions (EC) No 2371/2002 and (
 EC) No 639/2004
  []
@@ -306,11 +306,11 @@ EC) No 639/2004
 [3]
 
 Package natbib Warning: Citation `bergstra2012random' on page 4 undefined on in
-put line 187.
+put line 186.
 
 [4]
 
-LaTeX Warning: Reference `fig:pm' on page 5 undefined on input line 198.
+LaTeX Warning: Reference `fig:pm' on page 5 undefined on input line 197.
 
 (./randomGrid.bbl
 
@@ -319,48 +319,48 @@ Package natbib Warning: Empty `thebibliography' environment on input line 6.
 )
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 236.
+               Default added (so using `tbp') on input line 235.
 
 <rg-lhpar-1.png, id=24, 722.7pt x 216.81pt>
 File: rg-lhpar-1.png Graphic file (type png)
 <use rg-lhpar-1.png>
-Package pdftex.def Info: rg-lhpar-1.png  used on input line 236.
+Package pdftex.def Info: rg-lhpar-1.png  used on input line 235.
 (pdftex.def)             Requested size: 361.34999pt x 108.40472pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 237.
+               Default added (so using `tbp') on input line 236.
 
 <rg-derived-1.png, id=25, 722.7pt x 578.16pt>
 File: rg-derived-1.png Graphic file (type png)
 <use rg-derived-1.png>
-Package pdftex.def Info: rg-derived-1.png  used on input line 237.
+Package pdftex.def Info: rg-derived-1.png  used on input line 236.
 (pdftex.def)             Requested size: 361.34999pt x 289.07928pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 238.
+               Default added (so using `tbp') on input line 237.
 
 <rg-vectors-1.png, id=26, 722.7pt x 722.7pt>
 File: rg-vectors-1.png Graphic file (type png)
 <use rg-vectors-1.png>
-Package pdftex.def Info: rg-vectors-1.png  used on input line 238.
+Package pdftex.def Info: rg-vectors-1.png  used on input line 237.
+(pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 238.
+
+<rg-ts-1.png, id=27, 722.7pt x 722.7pt>
+File: rg-ts-1.png Graphic file (type png)
+<use rg-ts-1.png>
+Package pdftex.def Info: rg-ts-1.png  used on input line 238.
 (pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 239.
 
-<rg-ts-1.png, id=27, 722.7pt x 722.7pt>
-File: rg-ts-1.png Graphic file (type png)
-<use rg-ts-1.png>
-Package pdftex.def Info: rg-ts-1.png  used on input line 239.
-(pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 240.
-
 <util.png, id=28, 694.595pt x 733.74126pt>
 File: util.png Graphic file (type png)
 <use util.png>
-Package pdftex.def Info: util.png  used on input line 240.
+Package pdftex.def Info: util.png  used on input line 239.
 (pdftex.def)             Requested size: 361.34999pt x 381.72679pt.
 
 Package natbib Warning: There were undefined citations.
@@ -381,7 +381,7 @@ Here is how much of TeX's memory you used:
  6227 multiletter control sequences out of 15000+600000
  9884 words of font info for 37 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 41i,5n,30p,1405b,224s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,5n,30p,1449b,224s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 2.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/
@@ -393,7 +393,7 @@ ic/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti12.pfb>
-Output written on randomGrid.pdf (9 pages, 986403 bytes).
+Output written on randomGrid.pdf (9 pages, 986500 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
