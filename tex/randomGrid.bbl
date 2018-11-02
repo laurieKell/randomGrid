@@ -1,18 +1,6 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{0}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
-%Type = Article
-\bibitem[{Kell et~al.(2007)Kell, Mosqueira, Grosjean, Fromentin, Garcia,
-  Hillary, Jardim, Mardle, Pastoors, Poos et~al.}]{kell2007flr}
-\bibinfo{author}{L.~Kell}, \bibinfo{author}{I.~Mosqueira},
-  \bibinfo{author}{P.~Grosjean}, \bibinfo{author}{J.~Fromentin},
-  \bibinfo{author}{D.~Garcia}, \bibinfo{author}{R.~Hillary},
-  \bibinfo{author}{E.~Jardim}, \bibinfo{author}{S.~Mardle},
-  \bibinfo{author}{M.~Pastoors}, \bibinfo{author}{J.~Poos}, et~al.,
-\newblock \bibinfo{title}{{FLR:} an open-source framework for the evaluation
-  and development of management strategies},
-\newblock \bibinfo{journal}{ICES J. Mar. Sci.} \bibinfo{volume}{64}
-  (\bibinfo{year}{2007}) \bibinfo{pages}{640}.
 
 \end{thebibliography}
