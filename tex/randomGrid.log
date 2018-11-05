@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  5 NOV 2018 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  5 NOV 2018 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -226,56 +226,56 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 {/usr/local/texlive/2018basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] [3] [4] [5]
 
-LaTeX Warning: Reference `fig:pm' on page 6 undefined on input line 206.
+LaTeX Warning: Reference `fig:pm' on page 6 undefined on input line 235.
 
-(./randomGrid.bbl [6] [7])
+[6] (./randomGrid.bbl [7]) [8]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 244.
+               Default added (so using `tbp') on input line 274.
 
-<rg-lhpar-1.png, id=36, 722.7pt x 216.81pt>
+<rg-lhpar-1.png, id=43, 722.7pt x 216.81pt>
 File: rg-lhpar-1.png Graphic file (type png)
 <use rg-lhpar-1.png>
-Package pdftex.def Info: rg-lhpar-1.png  used on input line 244.
+Package pdftex.def Info: rg-lhpar-1.png  used on input line 274.
 (pdftex.def)             Requested size: 361.34999pt x 108.40472pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 245.
+               Default added (so using `tbp') on input line 275.
 
-<rg-vectors-1.png, id=37, 722.7pt x 722.7pt>
+<rg-vectors-1.png, id=44, 722.7pt x 722.7pt>
 File: rg-vectors-1.png Graphic file (type png)
 <use rg-vectors-1.png>
-Package pdftex.def Info: rg-vectors-1.png  used on input line 245.
+Package pdftex.def Info: rg-vectors-1.png  used on input line 275.
 (pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 246.
+               Default added (so using `tbp') on input line 276.
 
-<rg-derived-1.png, id=38, 722.7pt x 578.16pt>
+<rg-derived-1.png, id=45, 722.7pt x 578.16pt>
 File: rg-derived-1.png Graphic file (type png)
 <use rg-derived-1.png>
-Package pdftex.def Info: rg-derived-1.png  used on input line 246.
+Package pdftex.def Info: rg-derived-1.png  used on input line 276.
 (pdftex.def)             Requested size: 361.34999pt x 289.07928pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 247.
+               Default added (so using `tbp') on input line 277.
 
-<rg-ts-1.png, id=39, 722.7pt x 722.7pt>
+<rg-ts-1.png, id=46, 722.7pt x 722.7pt>
 File: rg-ts-1.png Graphic file (type png)
 <use rg-ts-1.png>
-Package pdftex.def Info: rg-ts-1.png  used on input line 247.
+Package pdftex.def Info: rg-ts-1.png  used on input line 277.
 (pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 248.
+               Default added (so using `tbp') on input line 278.
 
-<util.png, id=40, 694.595pt x 733.74126pt>
+<util.png, id=47, 694.595pt x 733.74126pt>
 File: util.png Graphic file (type png)
 <use util.png>
-Package pdftex.def Info: util.png  used on input line 248.
+Package pdftex.def Info: util.png  used on input line 278.
 (pdftex.def)             Requested size: 361.34999pt x 381.72679pt.
-[8 <./rg-lhpar-1.png>] [9 <./rg-vectors-1.png (PNG copy)>] [10 <./rg-derived-1.
-png>] [11 <./rg-ts-1.png (PNG copy)>] [12 <./util.png>] (./randomGrid.aux)
+[9 <./rg-lhpar-1.png>] [10 <./rg-vectors-1.png (PNG copy)>] [11 <./rg-derived-1
+.png>] [12 <./rg-ts-1.png (PNG copy)>] [13 <./util.png>] (./randomGrid.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -284,30 +284,34 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2620 strings out of 494085
- 35904 string characters out of 6163377
- 96701 words of memory out of 5000000
- 6262 multiletter control sequences out of 15000+600000
+ 2626 strings out of 494085
+ 36096 string characters out of 6163377
+ 96791 words of memory out of 5000000
+ 6268 multiletter control sequences out of 15000+600000
  9884 words of font info for 37 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 41i,5n,30p,1574b,237s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,30p,1574b,257s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 2.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr17.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018basic/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018basic/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on randomGrid.pdf (12 pages, 1009652 bytes).
+mex10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018basic/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018basic/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018basic/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018basic
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on randomGrid.pdf (13 pages, 1045912 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 120 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

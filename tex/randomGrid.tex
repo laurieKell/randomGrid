@@ -154,7 +154,7 @@ To assess case specific harvest strategies (via simulation) within the MSE, we w
 
 Often empirical harvest control rules require extensive exhaustive parameter searches to tune or optimise 'hyper-parameters' (external parameters to a model) that aren’t directly learnt from estimators.  This requires a technique known as a grid search that extensively searches for all combinations of all parameters. In contrast, and some what less time consuming alternative and efficient parameter search strategies can be considered for a given range of parameter space and a known distribution.  As such a random sample can be obtained and used to perform the different experiments for parameter optimisation. This approach differs from the simplest constant catch HCR strategy whereby catches are kept constant and low to ensure no lasting damage is done in periods of low stock productivity or whereby the stock is highly variable year on year, therefore the empirical approach can help optimise catch by setting a precautionary Total Allowable Catch (TAC). 
 
-Here we describe methods to assess the performance of each HCR via a set of utilities and show the benefits compared to a constant catch strategy: safety ($B/B_{MSY} >1$), yield ($yield/MSY$), kobe proportion (proportion of years that stay in the green zone of kobe plot ($B/B_{MSY} >1$), and Yield Annual Variation (yield changes by 10\% year on year). We show that 
+Here we describe methods to assess the performance of each empirical HCR via a set of utilities and show the benefits compared to a constant catch strategy across a spectrum of different species: safety ($B/B_{MSY} >1$), yield ($yield/MSY$), kobe proportion (proportion of years that stay in the green zone of kobe plot ($B/B_{MSY} >1$), and Yield Annual Variation (yield changes by 10\% year on year). 
 
 
 \section{Material and Methods}
@@ -168,12 +168,38 @@ $F_{Crash}$ which is the fishing mortality that will drive the stock to extincti
 
 The equilibrium relationships can then be turned into a forward dynamic model and projected forward.
 
-A variety of functional forms can be assumed for all of the various process, i.e. growth, mortality, maturity, the selection pattern of the fisheries and the stock recruitment relationship. Commonly processes such as growth an maturity-at-age are well known while those for natural mortality and the stock recruitment relationship are poorly known \cite{michielsens2004bayesian}. In the later case assumptions have to be made and to evaluate the sensitivity of any analysis to those assumptions a variety of scenarios are considered. Below a base case is defined that can then be modified to create a variety of scenarios.
-
+A variety of functional forms can be assumed for all of the various process, i.e. growth, mortality, maturity, the selection pattern of the fisheries and the stock recruitment relationship. Commonly processes such as growth an maturity-at-age are well known while those for natural mortality and the stock recruitment relationship are poorly known \cite{michielsens2004bayesian}. In the later case assumptions have to be made and to evaluate the sensitivity of any analysis to those assumptions a variety of scenarios are considered. 
 
 \subsection{Methods}
 
-FLife and MSE
+Individual Growth
+
+Growth in length is modelled by the Von Bertalanffy growth equation @vonbert1957quantitative
+
+\begin{equation} L = L_\infty(1 - exp(-k(t-t_0)) \end{equation}
+         
+where $k$ is the rate at which the rate of growth in length declines as length approaches the asymptotic length  $L_\infty$ and $t_{0}$ is the hypothetical time at which an individual is of zero length.
+
+Length is converted to mass using the length-weight relationship 
+    
+\begin{equation} W = aL_t^b \end{equation}
+
+\noindent where $a$ is the condition factor and $b$ is the allometric growth coefficient.
+
+
+Maturity-at-age
+
+Proportion mature-at-age is modelled by the logistic equation with 2 parameters: age at 50\% ($a_{50}$) and 95\% ($a_{95}$) mature.
+
+\begin{equation}
+f(x) = \left\{ \begin{array}{ll}
+			0                                 &\mbox{ if $(a_{50}-x)/a_{95} >  5$} \\
+			a_{\infty}                        &\mbox{ if $(a_{50}-x)/a_{95} < -5$} \\
+			\frac{m_{\infty}}{1.0+19.0^{(a_{50}-x)/_{95})}} &\mbox{ otherwise}
+		\end{array}
+       \right.
+\end{equation}
+
 
 \subsubsection{Operating Model}
 
@@ -223,6 +249,7 @@ Fig.3 displays the equilibrium relationships of the operating model. Comparisons
 
 \section{Discussion}
 
+Fisheries management is often faced with multiple conflicting objectives e.g social, biological and economic, and it is widely recognised that their is a need to incorporate these objectives into management plans. Howvever such an experiment on large scale fish stocks is nearly impossible to perform.  Therefore performing computer simulations to develop robust management procedures is particularly valuable in data poor situtations where knowledge and data are limited, but also in data rich situtaions as simulation testing an assessment procedure using a model conditioned on the same assumptions is not necessarily a true test of robustness.  This paper has shown that the desired performance measure can be met via tweaking of the management procedure by adjusting a particular HCR a specific management objective an be achieved.
 
 \begin{itemize}
 \item Bullet point one
