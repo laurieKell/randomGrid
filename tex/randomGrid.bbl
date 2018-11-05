@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{12}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -79,6 +79,20 @@
   and development of management strategies},
 \newblock \bibinfo{journal}{ICES J. Mar. Sci.} \bibinfo{volume}{64}
   (\bibinfo{year}{2007}) \bibinfo{pages}{640}.
+%Type = Article
+\bibitem[{Sissenwine and Shepherd(1987)}]{sissenwine1987alternative}
+\bibinfo{author}{M.~Sissenwine}, \bibinfo{author}{J.~Shepherd},
+\newblock \bibinfo{title}{An alternative perspective on recruitment overfishing
+  and biological reference points},
+\newblock \bibinfo{journal}{Can. J. Fish. Aquat. Sci.} \bibinfo{volume}{44}
+  (\bibinfo{year}{1987}) \bibinfo{pages}{913--918}.
+%Type = Article
+\bibitem[{Michielsens and McAllister(2004)}]{michielsens2004bayesian}
+\bibinfo{author}{C.~G. Michielsens}, \bibinfo{author}{M.~K. McAllister},
+\newblock \bibinfo{title}{A bayesian hierarchical analysis of stock recruit
+  data: quantifying structural and parameter uncertainties},
+\newblock \bibinfo{journal}{Can. J. Fish. Aquat. Sci.} \bibinfo{volume}{61}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{1032--1047}.
 %Type = Article
 \bibitem[{Bergstra and Bengio(2012)}]{bergstra2012random}
 \bibinfo{author}{J.~Bergstra}, \bibinfo{author}{Y.~Bengio},
