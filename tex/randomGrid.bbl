@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{16}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -93,6 +93,34 @@
   data: quantifying structural and parameter uncertainties},
 \newblock \bibinfo{journal}{Can. J. Fish. Aquat. Sci.} \bibinfo{volume}{61}
   (\bibinfo{year}{2004}) \bibinfo{pages}{1032--1047}.
+%Type = Article
+\bibitem[{Von~Bertalanffy(1957)}]{vonbert1957quantitative}
+\bibinfo{author}{L.~Von~Bertalanffy},
+\newblock \bibinfo{title}{Quantitative laws in metabolism and growth},
+\newblock \bibinfo{journal}{Quarterly Review of Biology}
+  (\bibinfo{year}{1957}) \bibinfo{pages}{217--231}.
+%Type = Book
+\bibitem[{Beverton and Holt(1993)}]{beverton1993dynamics}
+\bibinfo{author}{R.~Beverton}, \bibinfo{author}{S.~Holt}, \bibinfo{title}{On
+  the dynamics of exploited fish populations}, volume~\bibinfo{volume}{11},
+  \bibinfo{publisher}{Springer}, \bibinfo{year}{1993}.
+%Type = Article
+\bibitem[{Pepin and Marshall(2015)}]{pepin2015reconsidering}
+\bibinfo{author}{P.~Pepin}, \bibinfo{author}{C.~T. Marshall},
+\newblock \bibinfo{title}{Reconsidering the impossible???linking environmental
+  drivers to growth, mortality, and recruitment of fish 1},
+\newblock \bibinfo{journal}{Canadian Journal of Fisheries and Aquatic Sciences}
+  \bibinfo{volume}{72} (\bibinfo{year}{2015}) \bibinfo{pages}{1--11}.
+%Type = Inproceedings
+\bibitem[{Gabriel and Mace(1999)}]{gabriel1999review}
+\bibinfo{author}{W.~Gabriel}, \bibinfo{author}{P.~Mace},
+\newblock \bibinfo{title}{A review of biological reference points in the
+  context of the precautionary approach},
+\newblock in: \bibinfo{booktitle}{Proceedings of the fifth national {NMFS}
+  stock assessment workshop: providing scientific advice to implement the
+  precautionary approach under the Magnuson-Stevens fishery conservation and
+  management act. {NOAA} Tech Memo {NMFS-F/SPO-40}}, pp.
+  \bibinfo{pages}{34--45}.
 %Type = Article
 \bibitem[{Bergstra and Bengio(2012)}]{bergstra2012random}
 \bibinfo{author}{J.~Bergstra}, \bibinfo{author}{Y.~Bengio},
