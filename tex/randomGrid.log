@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  7 NOV 2018 10:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  7 NOV 2018 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -224,54 +224,54 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 
 
 {/usr/local/texlive/2018basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4] [5] [6] [7] [8] [9] (./randomGrid.bbl [10])
+[2] [3] [4] [5] [6] [7] [8] [9] (./randomGrid.bbl [10] [11])
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 363.
+
+<rg-lhpar-1.png, id=53, 722.7pt x 216.81pt>
+File: rg-lhpar-1.png Graphic file (type png)
+<use rg-lhpar-1.png>
+Package pdftex.def Info: rg-lhpar-1.png  used on input line 363.
+(pdftex.def)             Requested size: 361.34999pt x 108.40472pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 364.
+
+<rg-vectors-1.png, id=54, 722.7pt x 722.7pt>
+File: rg-vectors-1.png Graphic file (type png)
+<use rg-vectors-1.png>
+Package pdftex.def Info: rg-vectors-1.png  used on input line 364.
+(pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 365.
 
-<rg-lhpar-1.png, id=50, 722.7pt x 216.81pt>
-File: rg-lhpar-1.png Graphic file (type png)
-<use rg-lhpar-1.png>
-Package pdftex.def Info: rg-lhpar-1.png  used on input line 365.
-(pdftex.def)             Requested size: 361.34999pt x 108.40472pt.
+<rg-derived-1.png, id=55, 722.7pt x 578.16pt>
+File: rg-derived-1.png Graphic file (type png)
+<use rg-derived-1.png>
+Package pdftex.def Info: rg-derived-1.png  used on input line 365.
+(pdftex.def)             Requested size: 361.34999pt x 289.07928pt.
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 366.
 
-<rg-vectors-1.png, id=51, 722.7pt x 722.7pt>
-File: rg-vectors-1.png Graphic file (type png)
-<use rg-vectors-1.png>
-Package pdftex.def Info: rg-vectors-1.png  used on input line 366.
+<rg-ts-1.png, id=56, 722.7pt x 722.7pt>
+File: rg-ts-1.png Graphic file (type png)
+<use rg-ts-1.png>
+Package pdftex.def Info: rg-ts-1.png  used on input line 366.
 (pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 367.
 
-<rg-derived-1.png, id=52, 722.7pt x 578.16pt>
-File: rg-derived-1.png Graphic file (type png)
-<use rg-derived-1.png>
-Package pdftex.def Info: rg-derived-1.png  used on input line 367.
-(pdftex.def)             Requested size: 361.34999pt x 289.07928pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 368.
-
-<rg-ts-1.png, id=53, 722.7pt x 722.7pt>
-File: rg-ts-1.png Graphic file (type png)
-<use rg-ts-1.png>
-Package pdftex.def Info: rg-ts-1.png  used on input line 368.
-(pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 369.
-
-<util.png, id=54, 694.595pt x 733.74126pt>
+<util.png, id=57, 694.595pt x 733.74126pt>
 File: util.png Graphic file (type png)
 <use util.png>
-Package pdftex.def Info: util.png  used on input line 369.
+Package pdftex.def Info: util.png  used on input line 367.
 (pdftex.def)             Requested size: 361.34999pt x 381.72679pt.
-[11] [12 <./rg-lhpar-1.png> <./rg-vectors-1.png (PNG copy)>] [13 <./rg-derived-
-1.png>] [14 <./rg-ts-1.png (PNG copy)>] [15 <./util.png>] (./randomGrid.aux)
+[12 <./rg-lhpar-1.png>] [13 <./rg-vectors-1.png (PNG copy)>] [14 <./rg-derived-
+1.png>] [15 <./rg-ts-1.png (PNG copy)>] [16 <./util.png>] (./randomGrid.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -283,7 +283,7 @@ Here is how much of TeX's memory you used:
  6280 multiletter control sequences out of 15000+600000
  9884 words of font info for 37 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 41i,9n,30p,1574b,237s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,30p,1574b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 2.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mex10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/
@@ -302,10 +302,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018basi
 c/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018b
 asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
 018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on randomGrid.pdf (15 pages, 1070665 bytes).
+Output written on randomGrid.pdf (16 pages, 1071895 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
