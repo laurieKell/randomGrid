@@ -1,0 +1,14 @@
+base
+knitr
+ggplot2
+plyr
+dplyr
+reshape
+GGally
+lattice
+FLCore
+FLBRP
+FLFishery
+FLasher
+ggplotFL
+FLife

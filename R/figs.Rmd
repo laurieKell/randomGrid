@@ -28,8 +28,8 @@ iTab=0
 ```{r, dir}
 dirMy=dirname(dirname(FLife:::getScriptPath()))
 #dirMy="/home/laurence/Desktop/sea++/mydas/tasks/task4"
-dirDat="/home/laurence/Desktop/Dropbox/mydasOMs/data"
-dirRes="/home/laurence/Desktop/Dropbox/mydasOMs/results"
+dirDat="C:\\Users\\emper\\Dropbox\\mydas\\data"
+#dirRes="/home/laurence/Desktop/Dropbox/mydasOMs/results"
 ```
 ```{r, pkgs}
 library(ggplot2)
@@ -84,14 +84,25 @@ rm(pr)
 k=ddply(params,.(spp), with, mean(k))
 ord=ac(k[order(k$V1),"spp"])
 params$spp=factor(params$spp,levels=ord)
-save(params,file="/home/laurence/Desktop/sea++/mydas/project/papers/randomGrid/data/params.RData")
+#save(params,file="/home/laurence/Desktop/sea++/mydas/project/papers/randomGrid/data/params.RData")
 ```
 
 
 ```{r, lhpar, fig.height=3}
 ggplot(transform(melt(params[,c("spp","linf","k","l50")]),  
                  variable=factor(variable,level=c("k","linf","l50"))))+
-  geom_boxplot(aes(spp,value))+facet_wrap(~variable,scale="free")
+        geom_boxplot(aes(x = spp, y = value),size = 0.5, notch = FALSE,fill="grey",outlier.shape = 20, fatten=0.5)          +
+        theme_bw() +
+        theme(plot.title = element_text(size = 14,face = "bold"),
+              text = element_text(size = 14),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 14, angle = 45, hjust = 1),
+              panel.grid.major=element_blank(),
+              panel.grid.minor=element_blank(),
+              strip.background=element_blank()
+              ) +
+        facet_wrap( ~ variable, scale="free")+expand_limits(y=0)+ylab("")+xlab("")
+  
 ```
 
 **Figure `r iFig=iFig+1; iFig`** Life history parameters.
@@ -101,7 +112,19 @@ ggplot(transform(melt(params[,c("spp","linf","k","l50")]),
 ggplot(transform(melt(params[,c("spp","spr0","lopt","r","rc","fm","mk","bmsy","fmsy","msy")]),
                  variable=factor(variable,
                           level=c("r","rc","spr0","lopt","fm","mk","bmsy","fmsy","msy"))))+
-  geom_boxplot(aes(spp,value))+facet_wrap(~variable,scale="free")
+  geom_boxplot(aes(x = spp, y = value),size = 0.5, notch = FALSE,         fill="grey",outlier.shape = 20, fatten=0.5) +
+        theme_bw() +
+        theme(plot.title = element_text(size = 14,face = "bold"),
+              text = element_text(size = 14),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 14, angle = 45, hjust = 1),
+              panel.grid.major=element_blank(),
+              panel.grid.minor=element_blank(),
+              strip.background=element_blank()
+              ) +
+        facet_wrap( ~ variable, scale="free")+expand_limits(y=0)+ylab("")+xlab("")
+  
+
 ```
 
 **Figure `r iFig=iFig+1; iFig`** Reference points.
@@ -149,11 +172,21 @@ vct=rbind(vct,dat)
 vct=ddply(vct,.(spp,age,qname),with, quantile(data))
      
 ggplot(subset(vct,age<=10))+
-  geom_ribbon(aes(age,ymax=`75%`,ymin=`25%`,col=spp,fill=spp),alpha=0.2)+
+  geom_ribbon(aes(age,ymax=`75%`,ymin=`25%`,col=spp,fill=spp),alpha=0.7)+
   geom_line(aes(age,`50%`,col=spp))+
   facet_wrap(~qname,scale="free")+
   scale_x_continuous(limits=c(0,10))+
-  xlab("Age")+ylab("")+
+  xlab("Age")+ylab("")+ theme_bw() +
+        theme(plot.title = element_text(size = 14,face = "bold"),
+              text = element_text(size = 14),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 14, hjust = 1),
+              panel.grid.major=element_blank(),
+              panel.grid.minor=element_blank(),
+              strip.background=element_blank()
+              )+
+    scale_color_brewer(palette = "Greys")+
+      scale_fill_brewer(palette = "Greys")+
   theme(legend.position="bottom")
 ```
 
@@ -163,7 +196,14 @@ ggplot(subset(vct,age<=10))+
 ```{r, eq}
 load(file.path(dirDat,"turbot.RData"))
 
-plot(iter(eq,1),refpts=FALSE)  
+plot(iter(eq,1),refpts=FALSE) + theme_bw()+theme(plot.title = element_text(size = 14,face = "bold"),
+              text = element_text(size = 14),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 14, hjust = 1),
+              panel.grid.major=element_blank(),
+              panel.grid.minor=element_blank(),
+              strip.background=element_blank()
+              )  
 ```
 
 **Figure `r iFig=iFig+1; iFig`** Equilibrum Curves.
@@ -178,7 +218,14 @@ dat=FLQuants(window(om,start=10,end=60),
           "f" =   function(x) fbar(x)%/%refpts(eq)["msy","harvest"], 
           "rec" = function(x) rec(x)%/%refpts( eq)["msy","rec"], 
           "catch"=function(x) landings(x)%/%refpts(eq)["msy","yield"])
-plot(dat)
+plot(dat, fill="grey50")+ theme_bw()+theme(plot.title = element_text(size = 14,face = "bold"),
+              text = element_text(size = 14),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 14, hjust = 1),
+              panel.grid.major=element_blank(),
+              panel.grid.minor=element_blank(),
+              strip.background=element_blank()
+              ) 
 ```
 
 **Figure `r iFig=iFig+1; iFig`** Time series relative to MSY benchmarks.
