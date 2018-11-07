@@ -58,28 +58,28 @@ vonBFn=function(age,params){
   res}
 
 load(file.path(dirDat,"brill.RData"))
-prior=rbind(prior[,-5],vonBFn(prior,age=prior["a50"]))
+prior=rbind(prior[-4],vonBFn(prior,age=prior["a50"]))
 pr=cbind(spp="brill",model.frame(prior))
 
 load(file.path(dirDat,"turbot.RData"))
-prior=rbind(prior[,-5],vonBFn(prior,age=prior["a50"]))
+prior=rbind(prior[-4],vonBFn(prior,age=prior["a50"]))
 pr=rbind.fill(pr,cbind(spp="turbot",model.frame(prior)))
 
 load(file.path(dirDat,"ray.RData"))
-prior=rbind(prior[,-5],vonBFn(prior,age=prior["a50"]))
+prior=rbind(prior[-4],vonBFn(prior,age=prior["a50"]))
 pr=rbind.fill(pr,cbind(spp="ray",model.frame(prior)))
 
 load(file.path(dirDat,"pollack.RData"))
-prior=rbind(prior[,-5],vonBFn(prior,age=prior["a50"]))
+prior=rbind(prior[-4],vonBFn(prior,age=prior["a50"]))
 pr=rbind.fill(pr,cbind(spp="pollack",model.frame(prior)))
 
 load(file.path(dirDat,"sprat.RData"))
-prior=rbind(prior[,-5],vonBFn(prior,age=prior["a50"]))
+prior=rbind(prior[-4],vonBFn(prior,age=prior["a50"]))
 pr=rbind.fill(pr,cbind(spp="sprat",model.frame(prior)))
-names(pr)[5]="l50"
+names(pr)[22]="l50"
 
 params=pr
-rm(pr)
+rm(pr)  
 
 k=ddply(params,.(spp), with, mean(k))
 ord=ac(k[order(k$V1),"spp"])
@@ -89,10 +89,13 @@ save(params,file="/home/laurence/Desktop/sea++/mydas/project/papers/randomGrid/d
 
 
 ```{r, lhpar, fig.height=3}
-ggplot(transform(melt(params[,c("spp","linf","k","l50")]),
+ggplot(transform(melt(params[,c("spp","linf","k","l50")]),  
                  variable=factor(variable,level=c("k","linf","l50"))))+
   geom_boxplot(aes(spp,value))+facet_wrap(~variable,scale="free")
 ```
+
+**Figure `r iFig=iFig+1; iFig`** Life history parameters.
+
 
 ```{r, derived, fig.height=8}
 ggplot(transform(melt(params[,c("spp","spr0","lopt","r","rc","fm","mk","bmsy","fmsy","msy")]),
@@ -100,6 +103,8 @@ ggplot(transform(melt(params[,c("spp","spr0","lopt","r","rc","fm","mk","bmsy","f
                           level=c("r","rc","spr0","lopt","fm","mk","bmsy","fmsy","msy"))))+
   geom_boxplot(aes(spp,value))+facet_wrap(~variable,scale="free")
 ```
+
+**Figure `r iFig=iFig+1; iFig`** Reference points.
 
 
 ## Equilibrium dynamics
