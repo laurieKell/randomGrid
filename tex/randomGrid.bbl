@@ -1,6 +1,131 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{16}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Commission(2013)}]{european2013regulation}
+\bibinfo{author}{E.~Commission},
+\newblock \bibinfo{title}{Regulation (eu) no 1380/2013 of the european
+  parliament and of the council of 11 december 2013 on the common fisheries
+  policy, amending council regulations (ec) no 1954/2003 and (ec) no 1224/2009,
+  and repealing council regulations (ec) no 2371/2002 and (ec) no 639/2004, and
+  council decision 2004/585/ec}  (\bibinfo{year}{2013}).
+%Type = Article
+\bibitem[{Bentley(2015)}]{bentley2015data}
+\bibinfo{author}{N.~Bentley},
+\newblock \bibinfo{title}{Data and time poverty in fisheries estimation:
+  potential approaches and solutions},
+\newblock \bibinfo{journal}{ICES J. Mar. Sci.} \bibinfo{volume}{72}
+  (\bibinfo{year}{2015}) \bibinfo{pages}{186--193}.
+%Type = Article
+\bibitem[{Costello et~al.(2012)Costello, Ovando, Hilborn, Gaines, Deschenes,
+  and Lester}]{costello2012status}
+\bibinfo{author}{C.~Costello}, \bibinfo{author}{D.~Ovando},
+  \bibinfo{author}{R.~Hilborn}, \bibinfo{author}{S.~D. Gaines},
+  \bibinfo{author}{O.~Deschenes}, \bibinfo{author}{S.~E. Lester},
+\newblock \bibinfo{title}{Status and solutions for the world's unassessed
+  fisheries},
+\newblock \bibinfo{journal}{Science}  (\bibinfo{year}{2012})
+  \bibinfo{pages}{1224768}.
+%Type = Book
+\bibitem[{Quinn and Deriso(1999)}]{quinn1999quantitative}
+\bibinfo{author}{T.~J. Quinn}, \bibinfo{author}{R.~B. Deriso},
+  \bibinfo{title}{Quantitative fish dynamics}, \bibinfo{publisher}{Oxford
+  University Press}, \bibinfo{year}{1999}.
+%Type = Article
+\bibitem[{Pedersen and Berg(2017)}]{pedersen2017stochastic}
+\bibinfo{author}{M.~W. Pedersen}, \bibinfo{author}{C.~W. Berg},
+\newblock \bibinfo{title}{A stochastic surplus production model in continuous
+  time},
+\newblock \bibinfo{journal}{Fish and Fisheries} \bibinfo{volume}{18}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{226--243}.
+%Type = Article
+\bibitem[{Gedamke and Hoenig(2006)}]{gedamke2006estimating}
+\bibinfo{author}{T.~Gedamke}, \bibinfo{author}{J.~M. Hoenig},
+\newblock \bibinfo{title}{Estimating mortality from mean length data in
+  nonequilibrium situations, with application to the assessment of goosefish},
+\newblock \bibinfo{journal}{Transactions of the American Fisheries Society}
+  \bibinfo{volume}{135} (\bibinfo{year}{2006}) \bibinfo{pages}{476--487}.
+%Type = Article
+\bibitem[{Hordyk et~al.(2014)Hordyk, Ono, Sainsbury, Loneragan, and
+  Prince}]{hordyk2014some}
+\bibinfo{author}{A.~Hordyk}, \bibinfo{author}{K.~Ono},
+  \bibinfo{author}{K.~Sainsbury}, \bibinfo{author}{N.~Loneragan},
+  \bibinfo{author}{J.~Prince},
+\newblock \bibinfo{title}{Some explorations of the life history ratios to
+  describe length composition, spawning-per-recruit, and the spawning potential
+  ratio},
+\newblock \bibinfo{journal}{ICES Journal of Marine Science}
+  \bibinfo{volume}{72} (\bibinfo{year}{2014}) \bibinfo{pages}{204--216}.
+%Type = Article
+\bibitem[{Probst et~al.(2013)Probst, Kloppmann, and
+  Kraus}]{probst2013indicator}
+\bibinfo{author}{W.~N. Probst}, \bibinfo{author}{M.~Kloppmann},
+  \bibinfo{author}{G.~Kraus},
+\newblock \bibinfo{title}{Indicator-based status assessment of commercial fish
+  species in the north sea according to the eu marine strategy framework
+  directive (msfd)},
+\newblock \bibinfo{journal}{ICES Journal of Marine Science}
+  \bibinfo{volume}{70} (\bibinfo{year}{2013}) \bibinfo{pages}{694--706}.
+%Type = Article
+\bibitem[{Kell et~al.(2007)Kell, Mosqueira, Grosjean, Fromentin, Garcia,
+  Hillary, Jardim, Mardle, Pastoors, Poos et~al.}]{kell2007flr}
+\bibinfo{author}{L.~Kell}, \bibinfo{author}{I.~Mosqueira},
+  \bibinfo{author}{P.~Grosjean}, \bibinfo{author}{J.~Fromentin},
+  \bibinfo{author}{D.~Garcia}, \bibinfo{author}{R.~Hillary},
+  \bibinfo{author}{E.~Jardim}, \bibinfo{author}{S.~Mardle},
+  \bibinfo{author}{M.~Pastoors}, \bibinfo{author}{J.~Poos}, et~al.,
+\newblock \bibinfo{title}{{FLR:} an open-source framework for the evaluation
+  and development of management strategies},
+\newblock \bibinfo{journal}{ICES J. Mar. Sci.} \bibinfo{volume}{64}
+  (\bibinfo{year}{2007}) \bibinfo{pages}{640}.
+%Type = Article
+\bibitem[{Sissenwine and Shepherd(1987)}]{sissenwine1987alternative}
+\bibinfo{author}{M.~Sissenwine}, \bibinfo{author}{J.~Shepherd},
+\newblock \bibinfo{title}{An alternative perspective on recruitment overfishing
+  and biological reference points},
+\newblock \bibinfo{journal}{Can. J. Fish. Aquat. Sci.} \bibinfo{volume}{44}
+  (\bibinfo{year}{1987}) \bibinfo{pages}{913--918}.
+%Type = Article
+\bibitem[{Michielsens and McAllister(2004)}]{michielsens2004bayesian}
+\bibinfo{author}{C.~G. Michielsens}, \bibinfo{author}{M.~K. McAllister},
+\newblock \bibinfo{title}{A bayesian hierarchical analysis of stock recruit
+  data: quantifying structural and parameter uncertainties},
+\newblock \bibinfo{journal}{Can. J. Fish. Aquat. Sci.} \bibinfo{volume}{61}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{1032--1047}.
+%Type = Article
+\bibitem[{Von~Bertalanffy(1957)}]{vonbert1957quantitative}
+\bibinfo{author}{L.~Von~Bertalanffy},
+\newblock \bibinfo{title}{Quantitative laws in metabolism and growth},
+\newblock \bibinfo{journal}{Quarterly Review of Biology}
+  (\bibinfo{year}{1957}) \bibinfo{pages}{217--231}.
+%Type = Book
+\bibitem[{Beverton and Holt(1993)}]{beverton1993dynamics}
+\bibinfo{author}{R.~Beverton}, \bibinfo{author}{S.~Holt}, \bibinfo{title}{On
+  the dynamics of exploited fish populations}, volume~\bibinfo{volume}{11},
+  \bibinfo{publisher}{Springer}, \bibinfo{year}{1993}.
+%Type = Article
+\bibitem[{Pepin and Marshall(2015)}]{pepin2015reconsidering}
+\bibinfo{author}{P.~Pepin}, \bibinfo{author}{C.~T. Marshall},
+\newblock \bibinfo{title}{Reconsidering the impossible???linking environmental
+  drivers to growth, mortality, and recruitment of fish 1},
+\newblock \bibinfo{journal}{Canadian Journal of Fisheries and Aquatic Sciences}
+  \bibinfo{volume}{72} (\bibinfo{year}{2015}) \bibinfo{pages}{1--11}.
+%Type = Inproceedings
+\bibitem[{Gabriel and Mace(1999)}]{gabriel1999review}
+\bibinfo{author}{W.~Gabriel}, \bibinfo{author}{P.~Mace},
+\newblock \bibinfo{title}{A review of biological reference points in the
+  context of the precautionary approach},
+\newblock in: \bibinfo{booktitle}{Proceedings of the fifth national {NMFS}
+  stock assessment workshop: providing scientific advice to implement the
+  precautionary approach under the Magnuson-Stevens fishery conservation and
+  management act. {NOAA} Tech Memo {NMFS-F/SPO-40}}, pp.
+  \bibinfo{pages}{34--45}.
+%Type = Article
+\bibitem[{Bergstra and Bengio(2012)}]{bergstra2012random}
+\bibinfo{author}{J.~Bergstra}, \bibinfo{author}{Y.~Bengio},
+\newblock \bibinfo{title}{Random search for hyper-parameter optimization},
+\newblock \bibinfo{journal}{Journal of Machine Learning Research}
+  \bibinfo{volume}{13} (\bibinfo{year}{2012}) \bibinfo{pages}{281--305}.
 
 \end{thebibliography}
