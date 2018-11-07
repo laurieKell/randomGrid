@@ -3,7 +3,7 @@ title: "Random Grid"
 subtitle: "Figs"
 author: "L Kell & A Tidd"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: html_document
+output: pdf_document
 ---
 
 ```{r, knitr, eval=TRUE, echo=FALSE, warning=FALSE}
@@ -47,44 +47,36 @@ library(FLife)
 
 ## Life history parameters
 
-```{r, lh}
-load(file.path(dirDat,"brill.RData"))
-nms=dimnames(lh)$params[-17]
-par=FLPar(apply(lh,1,mean)[nms])
-load(file.path(dirDat,"turbot.RData"))
-par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
-load(file.path(dirDat,"ray.RData"))
-par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
-load(file.path(dirDat,"pollack.RData"))
-par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
-load(file.path(dirDat,"sprat.RData"))
-par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
-#load(file.path(dirDat,"lobster.RData"))
-#par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
-#load(file.path(dirDat,"razor.RData"))
-#par=cbind(par,FLPar(apply(lh,1,mean)[nms]))
-dimnames(par)$iter=c("brill","turbot","ray","pollack","sprat") #,"lobster","razor")
-lh=par
-rm(par)
-
-save(lh,file="/home/laurence/Desktop/sea++/mydas/project/papers/randomGrid/data/lh.RData")
-```
-
 ```{r, priors}
+vonBFn=function(age,params){
+  
+  dimnames(params)[[1]]=tolower(dimnames(params)[[1]])
+  
+  res=params["linf"]%*%(1.0-exp((-params["k"])%*%(age%-%params["t0"])))
+  
+  dimnames(res)=dimnames(age)
+  res}
+
 load(file.path(dirDat,"brill.RData"))
+prior=rbind(prior[,-5],vonBFn(prior,age=prior["a50"]))
 pr=cbind(spp="brill",model.frame(prior))
+
 load(file.path(dirDat,"turbot.RData"))
+prior=rbind(prior[,-5],vonBFn(prior,age=prior["a50"]))
 pr=rbind.fill(pr,cbind(spp="turbot",model.frame(prior)))
+
 load(file.path(dirDat,"ray.RData"))
+prior=rbind(prior[,-5],vonBFn(prior,age=prior["a50"]))
 pr=rbind.fill(pr,cbind(spp="ray",model.frame(prior)))
+
 load(file.path(dirDat,"pollack.RData"))
+prior=rbind(prior[,-5],vonBFn(prior,age=prior["a50"]))
 pr=rbind.fill(pr,cbind(spp="pollack",model.frame(prior)))
+
 load(file.path(dirDat,"sprat.RData"))
+prior=rbind(prior[,-5],vonBFn(prior,age=prior["a50"]))
 pr=rbind.fill(pr,cbind(spp="sprat",model.frame(prior)))
-#load(file.path(dirDat,"lobster.RData"))
-#pr=rbind.fill(pr,cbind(spp="lobster",model.frame(prior)))
-#load(file.path(dirDat,"razor.RData"))
-#pr=rbind.fill(pr,cbind(spp="razor",model.frame(prior)))
+names(pr)[5]="l50"
 
 params=pr
 rm(pr)
@@ -97,15 +89,15 @@ save(params,file="/home/laurence/Desktop/sea++/mydas/project/papers/randomGrid/d
 
 
 ```{r, lhpar, fig.height=3}
-ggplot(transform(melt(params[,c("spp","linf","k","a50")]),
-                 variable=factor(variable,level=c("k","linf","a50"))))+
+ggplot(transform(melt(params[,c("spp","linf","k","l50")]),
+                 variable=factor(variable,level=c("k","linf","l50"))))+
   geom_boxplot(aes(spp,value))+facet_wrap(~variable,scale="free")
 ```
 
 ```{r, derived, fig.height=8}
-ggplot(transform(melt(params[,c("spp","spr0","lopt","r","rc","fm","mk","bmsy")]),
+ggplot(transform(melt(params[,c("spp","spr0","lopt","r","rc","fm","mk","bmsy","fmsy","msy")]),
                  variable=factor(variable,
-                          level=c("r","rc","spr0","lopt","fm","mk","bmsy"))))+
+                          level=c("r","rc","spr0","lopt","fm","mk","bmsy","fmsy","msy"))))+
   geom_boxplot(aes(spp,value))+facet_wrap(~variable,scale="free")
 ```
 
@@ -123,10 +115,37 @@ eq=lhEql(lh,spwn=0)
 sel<-function(x) 
   catch.sel(x)%/%fapex(catch.sel(x))
 
-dat=FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Mass"=stock.wt)
+len<-function(x)
+  (stock.wt(x)%^%(1/lh["b"]))
 
-ggplot(subset(as.data.frame(dat),age<=10))+
-  geom_line(aes(age,data,col=dimnames(lh)$iter[iter]))+
+load(file.path(dirDat,"brill.RData"))
+dat=FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Length"=len)
+vct=cbind(spp="brill",as.data.frame(FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Length"=len)))
+
+load(file.path(dirDat,"turbot.RData"))
+dat=FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Length"=len)
+dat=cbind(spp="turbot",as.data.frame(FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Length"=len)))
+vct=rbind(vct,dat)
+
+load(file.path(dirDat,"ray.RData"))
+dat=FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Length"=len)
+dat=cbind(spp="ray",as.data.frame(FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Length"=len)))
+vct=rbind(vct,dat)
+
+load(file.path(dirDat,"pollack.RData"))
+dat=FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Length"=len)
+dat=cbind(spp="pollack",as.data.frame(FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Length"=len)))
+vct=rbind(vct,dat)
+
+load(file.path(dirDat,"sprat.RData"))
+dat=cbind(spp="sprat",as.data.frame(FLQuants(eq,"M"=m,"Selectivity"=sel,"Maturity"=mat,"Length"=len)))
+vct=rbind(vct,dat)
+
+vct=ddply(vct,.(spp,age,qname),with, quantile(data))
+     
+ggplot(subset(vct,age<=10))+
+  geom_ribbon(aes(age,ymax=`75%`,ymin=`25%`,col=spp,fill=spp),alpha=0.2)+
+  geom_line(aes(age,`50%`,col=spp))+
   facet_wrap(~qname,scale="free")+
   scale_x_continuous(limits=c(0,10))+
   xlab("Age")+ylab("")+
@@ -137,47 +156,24 @@ ggplot(subset(as.data.frame(dat),age<=10))+
 
 
 ```{r, eq}
-plot(eq,refpts=FALSE)  
+load(file.path(dirDat,"turbot.RData"))
+
+plot(iter(eq,1),refpts=FALSE)  
 ```
 
 **Figure `r iFig=iFig+1; iFig`** Equilibrum Curves.
 
 ## Population dynamics
 
-```{r om, eval=FALSE}
-#http://www.fishbase.org/manual/Key%20Facts.htm
+```{r ts}
+load(file.path(dirDat,"turbot.RData"))
 
-gTime=10 #aaply(lh,2,function(x) round(FLife:::genTime(FLPar(x))))
-
-fbar=as.FLQuant(mdply(data.frame(iter=1:7), function(iter) 
-                   data.frame(year=1:105,
-                              data=c(rep(.1,19),seq(.1,2,length.out=30),
-                                                seq(2.0,1,length.out=gTime[iter])[-1],
-                                                rep(1,61))[1:105])))
-
-eq@fbar=fbar%*%refpts(eq)["msy","harvest"]
-
-om=as(eq,"FLStock")
-om=fwd(om,f=fbar(om)[,-1],sr=eq)
-lh=par
-save(lh,eq,om,file=file.path(dirDat,"om7.RData"),compress="xz")
-
-plot(om)
-```
-
-**Figure `r iFig=iFig+1; iFig`** Time series.
-
-```{r ts, eval=FALSE}
-dat=as.data.frame(FLQuants(om, 
+dat=FLQuants(window(om,start=10,end=60), 
           "ssb" = function(x) ssb(x)%/%refpts( eq)["msy","ssb"], 
           "f" =   function(x) fbar(x)%/%refpts(eq)["msy","harvest"], 
           "rec" = function(x) rec(x)%/%refpts( eq)["msy","rec"], 
-          "catch"=function(x) landings(x)%/%refpts(eq)["msy","yield"]))
-ggplot(subset(dat,year<75))+
-  geom_line(aes(year,data,group=iter))+
-  geom_hline(aes(yintercept=1),col="red")+
-  facet_grid(qname~.)+
-  xlab("Year")+ylab("")
+          "catch"=function(x) landings(x)%/%refpts(eq)["msy","yield"])
+plot(dat)
 ```
 
 **Figure `r iFig=iFig+1; iFig`** Time series relative to MSY benchmarks.
