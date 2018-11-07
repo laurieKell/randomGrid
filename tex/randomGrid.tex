@@ -274,14 +274,30 @@ where $N_{t,a}$ is the number of fish of age $a$ at the beginning of year $t$, $
 
 \subsubsection{Management Procedure}
 
-The management procedure was based on an empirical MP, where an increase in an index of abundance resulted in an increase in the TAC, while a decrease in the index results in an decrease in the TAC.
+The management procedure was based on an empirical MP, where an increase in an index of abundance resulted in an increase in the TAC, while a decrease in the index results in an decrease in the TAC. This process is performed via a derivative control rule (D), and is so called as the control signal is derived from the trend in the signal (abundance), i.e. to the derivative of the error. 
+
+
+\begin{equation}
+ TAC^1_{y+1}=TAC_y\times 
+ \left\{\begin{array}{rcl}  
+    {1-k_1|\lambda|^{\gamma}} & \mbox{for} & \lambda<0\\[0.35cm]
+    {1+k_2\lambda} & \mbox{for} & \lambda\geq 0 
+ \end{array}\right.
+\end{equation}
+
+where $\lambda$ is the slope in the regression of $\ln I_y$ against year for the most recent $n$ years and $k_1$ and $k_2$ are \textit{gain} parameters and $\gamma$ actions asymmetry so that decreases in the index do not result in the same relative change as as an increase.
+
+The TAC is then the average of the last TAC and the value output by the HCR. 
+
+\begin{equation} 
+     TAC_{y+1} = 0.5\times\left(TAC_y+C^{\rm targ}_y\right)\\
+\end{equation}
 
 \subsubsection{Random Search}
 
 %https://stats.stackexchange.com/questions/160479/practical-hyperparameter-optimization-random-vs-grid-search
 
-When running an MSE commonly a set of MP scenarios are run to tune the MP, this requires running the MSE for each OM scenario for a range of fixed values in the HCR and then choosing the rule that best meets management objectives. If there are a lot of parameters to tune then a grid search may become unfeasible. An alternative is random search \cite{bergstra2012random} as randomly chosen trials are more efficient for parameter optimisation than trials based on a grid. 
-
+When running an MSE commonly a set of MP scenarios are run to tune the MP, this requires running the MSE for each OM scenario for a range of fixed values in the HCR and then choosing the rule that best meets management objectives. If there are a lot of parameters to tune then a grid search may become unfeasible. An alternative is random search \cite{bergstra2012random} as randomly chosen trials are more efficient for parameter optimisation than trials based on a grid. The random parameter search is performed where random combinations of hyperparameters k1 and k2 are used to find the optimal solutions for model in terms of a) safety, (recruitment in relation to virgin recruitment), b) yield (catch in relation to MSY), c) proportion of years in the kobe green zone. For instance as the process is random at each iteration its likely that the whole of the grid space would have been covered providing that there enough iterations there is a greater chance of finding the optimal parameter pairs. 
 %For example any distribution over a sample space with a finite maximum, the maximum of 60 random observations lies within the top 5\% of the true maximum, with 95\% probability.  Imagine the 5\% interval around the true maximum. Now imagine that we sample points from his space and see if any of it lands within that maximum. Each random draw has a 5\% chance of landing in that interval, if we draw n points independently, then the probability that all of them miss the desired interval is (1−0.05)n So the probability that at least one of them succeeds in hitting the interval is 1 minus that quantity. We want at least a .95 probability of success. To figure out the number of draws we need, just solve for n in the equation: 1−(1−0.05)^n>0.95 We get n⩾60
   
 \section{Results}
