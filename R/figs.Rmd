@@ -102,6 +102,7 @@ ggplot(transform(melt(params[,c("spp","linf","k","l50")]),
               strip.background=element_blank()
               ) +
         facet_wrap( ~ variable, scale="free")+expand_limits(y=0)+ylab("")+xlab("")
+ggsave(filename="C:\\randomGrid\\tex\\fig1.png", last_plot(),dpi=300, units='in',width=6, height=3)
   
 ```
 
@@ -124,7 +125,7 @@ ggplot(transform(melt(params[,c("spp","spr0","lopt","r","rc","fm","mk","bmsy","f
               ) +
         facet_wrap( ~ variable, scale="free")+expand_limits(y=0)+ylab("")+xlab("")
   
-
+ggsave(filename="C:\\randomGrid\\tex\\fig2.png", last_plot(),dpi=300, units='in',width=10, height=8)
 ```
 
 **Figure `r iFig=iFig+1; iFig`** Reference points.
@@ -188,6 +189,7 @@ ggplot(subset(vct,age<=10))+
     scale_color_brewer(palette = "Greys")+
       scale_fill_brewer(palette = "Greys")+
   theme(legend.position="bottom")
+ggsave(filename="C:\\randomGrid\\tex\\fig3.png", last_plot(),dpi=300, units='in',width=8, height=8)
 ```
 
 **Figure `r iFig=iFig+1; iFig`** Vectors.
@@ -204,6 +206,7 @@ plot(iter(eq,1),refpts=FALSE) + theme_bw()+theme(plot.title = element_text(size 
               panel.grid.minor=element_blank(),
               strip.background=element_blank()
               )  
+ggsave(filename="C:\\randomGrid\\tex\\figeq_notin_paper.png", last_plot(),dpi=300, units='in',width=8, height=6)
 ```
 
 **Figure `r iFig=iFig+1; iFig`** Equilibrum Curves.
@@ -226,6 +229,7 @@ plot(dat, fill="grey50")+ theme_bw()+theme(plot.title = element_text(size = 14,f
               panel.grid.minor=element_blank(),
               strip.background=element_blank()
               ) 
+ggsave(filename="C:\\randomGrid\\tex\\fig4.png", last_plot(),dpi=300, units='in',width=6, height=6)
 ```
 
 **Figure `r iFig=iFig+1; iFig`** Time series relative to MSY benchmarks.
