@@ -86,7 +86,7 @@ for (i in c("safety","kobe.p","yield","yieldAav")){
 }  
 ```
 ```{r, pairwiseplots, echo=TRUE, fig=TRUE}
-myPalette = colorRampPalette(brewer.pal(6, "Greys"))
+#myPalette = colorRampPalette(brewer.pal(6, "Greys"))
 pairwise1 = list()
 for (k in c("safety","kobe.p","yield","yieldAav")) {
   if(k %in% c("safety")){
@@ -94,10 +94,10 @@ for (k in c("safety","kobe.p","yield","yieldAav")) {
     aes(x = k1, y = k2, z = value, fill = value)  + 
     geom_tile() + 
    
-    #geom_contour(color = "white", alpha = 0.5) + 
-    #scale_fill_distiller("",palette="Spectral", na.value="white", direction=1) + 
     geom_contour(color = "white", alpha = 0.1) + 
-    scale_fill_gradientn("",colours=myPalette(4), breaks=c(0.4,0.6,0.8))+
+    scale_fill_distiller("",palette="Spectral", na.value="white", direction=1,breaks=c(0.4,0.6,0.8)) + 
+    #geom_contour(color = "white", alpha = 0.1) + 
+    #scale_fill_gradientn("",colours=myPalette(4), breaks=c(0.4,0.6,0.8))+
     theme_bw()+facet_grid(spp~objective) +
     theme(text = element_text(size=14),
           panel.grid.major = element_blank(),
@@ -114,10 +114,10 @@ if(k %in% c("kobe.p")){
     aes(x = k1, y = k2, z = value, fill = value)  + 
     geom_tile() + 
     
-    #geom_contour(color = "white", alpha = 0.5) + 
-    #scale_fill_distiller("",palette="Spectral", na.value="white", direction=1) + 
     geom_contour(color = "white", alpha = 0.1) + 
-    scale_fill_gradientn("",colours=myPalette(4), breaks=c(0.3,0.5,0.7))+
+    scale_fill_distiller("",palette="Spectral", na.value="white", direction=1, breaks=c(0.3,0.5,0.7)) + 
+    #geom_contour(color = "white", alpha = 0.1) + 
+    #scale_fill_gradientn("",colours=myPalette(4), breaks=c(0.3,0.5,0.7))+
     theme_bw()+facet_grid(spp~objective) +
     theme(text = element_text(size=14),
           panel.grid.major = element_blank(),
@@ -136,10 +136,10 @@ if(k %in% c("kobe.p")){
       aes(x = k1, y = k2, z = value, fill = value)  + 
       geom_tile() + 
       
-      #geom_contour(color = "white", alpha = 0.5) + 
-      #scale_fill_distiller("",palette="Spectral", na.value="white", direction=1) + 
       geom_contour(color = "white", alpha = 0.1) + 
-      scale_fill_gradientn("",colours=myPalette(4))+
+      scale_fill_distiller("",palette="Spectral", na.value="white", direction=1) + 
+      #geom_contour(color = "white", alpha = 0.1) + 
+      #scale_fill_gradientn("",colours=myPalette(4))+
       theme_bw()+facet_grid(spp~objective) +
       theme(text = element_text(size=14),
             panel.grid.major = element_blank(),
@@ -157,10 +157,10 @@ if(k %in% c("kobe.p")){
   pairwise1[[k]] =ggplot(subset(pairwise, objective==k)) + 
     aes(x = k1, y = k2, z = value, fill = value)  + 
     geom_tile() + 
-    #geom_contour(color = "white", alpha = 0.5) + 
-    #scale_fill_distiller("",palette="Spectral", na.value="white", direction=1) + 
     geom_contour(color = "white", alpha = 0.1) + 
-    scale_fill_gradientn("",colours=myPalette(4), breaks=c(0.9,0.95))+
+    scale_fill_distiller("",palette="Spectral", na.value="white", direction=1, breaks=c(0.9,0.95)) + 
+    #geom_contour(color = "white", alpha = 0.1) + 
+    #scale_fill_gradientn("",colours=myPalette(4), breaks=c(0.9,0.95))+
     theme_bw()+facet_grid(spp~objective) +
     theme(text = element_text(size=14),
           panel.grid.major = element_blank(),
@@ -207,7 +207,8 @@ ggplot(te) +
   #geom_contour(color = "white", alpha = 0.5) + 
   #scale_fill_distiller("",palette="Spectral", na.value="white", direction=1) + 
   geom_contour(color = "white", alpha = 0.1) + 
-  scale_fill_gradientn("utility",colours=myPalette(4), breaks=c(0, 0.5, 1))+
+  scale_fill_distiller("",palette="Spectral", na.value="white", direction=1, breaks=c(0, 0.5, 1))+
+  #scale_fill_gradientn("utility",colours=myPalette(4), breaks=c(0, 0.5, 1))+
   theme_bw()+facet_grid(spp~variable) +
   theme(text = element_text(size=14),
         panel.grid.major = element_blank(),
