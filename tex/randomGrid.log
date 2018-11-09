@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  9 NOV 2018 10:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  9 NOV 2018 16:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -266,20 +266,20 @@ Package pdftex.def Info: fig4.png  used on input line 366.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 367.
 
-<fig5.png, id=57, 3613.5pt x 4215.75pt>
+<fig5.png, id=57, 4818.0pt x 5420.25pt>
 File: fig5.png Graphic file (type png)
 <use fig5.png>
 Package pdftex.def Info: fig5.png  used on input line 367.
-(pdftex.def)             Requested size: 361.34999pt x 421.53537pt.
+(pdftex.def)             Requested size: 361.34999pt x 406.50122pt.
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 369.
 
-<fig6.png, id=59, 3613.5pt x 4215.75pt>
+<fig6.png, id=59, 4818.0pt x 5420.25pt>
 File: fig6.png Graphic file (type png)
 <use fig6.png>
 Package pdftex.def Info: fig6.png  used on input line 369.
-(pdftex.def)             Requested size: 361.34999pt x 421.53537pt.
+(pdftex.def)             Requested size: 361.34999pt x 406.50122pt.
 [12 <./fig1.png>] [13 <./fig2.png>] [14 <./fig3.png>] [15 <./fig4.png>]
 [16 <./fig5.png>] [17 <./fig6.png>] (./randomGrid.aux)
 
@@ -312,7 +312,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018basi
 c/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018b
 asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
 018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on randomGrid.pdf (17 pages, 3828765 bytes).
+Output written on randomGrid.pdf (17 pages, 4956626 bytes).
 PDF statistics:
  140 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream

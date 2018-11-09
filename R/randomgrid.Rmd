@@ -29,45 +29,7 @@ empd_pm$yieldAav = pmin(0.5,empd_pm$yieldAav)
 empd_pm$yieldAav = 1 - empd_pm$yieldAav
 test=melt(empd_pm, id.vars=c("spp","k1","k2"),measure.vars=c("safety","kobe.p","yield","yieldAav"))
 ```
-## remove brackets resulting from cut
-```{r, removebrackets,echo=TRUE,eval=TRUE}
-out=NULL
-for (i in c("brill","turbot","ray","pollack","sprat")){
-       for (k in c("safety","kobe.p","yield","yieldAav")) {
-  fld  = subset(test, variable==k & spp==i)
-  fld$spp=i
-  fld$objective=k
-  x = cut(fld$k1, seq(0,1, 0.075))
-  y = cut(fld$k2,seq(0,1,0.075))
-  
-  x = gsub(","," - ",x,fixed=TRUE)
-  fld$k1 = gsub("\\(|\\]","",x)
-  y = gsub(","," - ",y,fixed=TRUE)
-  fld$k2 = gsub("\\(|\\]","",y)
-  
-  fld=ddply(fld, .(spp,k1,k2, objective), summarise, z1=quantile(value,probs=0.5, na.rm=TRUE))
-  z = cut(fld$z1,seq(0,1,0.1))
-  z <- gsub(","," - ",z,fixed=TRUE)
-  fld$z <- gsub("\\(|\\]","",z)
-  
-  out=rbind(out,fld)
-       }
-}
 
-```
-
-## Blocky image
-```{r,blokimg, echo=TRUE, fig=TRUE}
-ggplot(na.omit(out) ,aes(k1,k2)) + 
-  geom_tile(aes(fill=z))+ 
-  #scale_fill_manual("values",values=brewer.pal(9,"YlOrRd"))+
-  facet_grid(spp~objective)+theme_bw()+
-  theme(text = element_text(size=8),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        strip.background = element_blank(),
-        axis.text.x = element_text(angle = 90, hjust = 1))
-```
 ## modelled display using GAM
 ```{r, modelloop, echo=TRUE,eval=TRUE}
 pairwise = list()
@@ -86,95 +48,29 @@ for (i in c("safety","kobe.p","yield","yieldAav")){
 }  
 ```
 ```{r, pairwiseplots, echo=TRUE, fig=TRUE}
-#myPalette = colorRampPalette(brewer.pal(6, "Greys"))
-pairwise1 = list()
-for (k in c("safety","kobe.p","yield","yieldAav")) {
-  if(k %in% c("safety")){
-  pairwise1[[k]] =ggplot(subset(pairwise, objective==k)) + 
-    aes(x = k1, y = k2, z = value, fill = value)  + 
-    geom_tile() + 
-   
-    geom_contour(color = "white", alpha = 0.1) + 
-    scale_fill_distiller("",palette="Spectral", na.value="white", direction=1,breaks=c(0.4,0.6,0.8)) + 
-    #geom_contour(color = "white", alpha = 0.1) + 
-    #scale_fill_gradientn("",colours=myPalette(4), breaks=c(0.4,0.6,0.8))+
-    theme_bw()+facet_grid(spp~objective) +
-    theme(text = element_text(size=14),
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank(),
-          legend.position="bottom",
-          legend.key.size = unit(0.75,"line"),
-          legend.text=element_text(size=10),
-          strip.background = element_blank(),
-          strip.text.y = element_blank(),
-          plot.margin = unit(c(0, 0, 0, 0), "cm")) + ylab("k2")+xlab("k1")
-  }
-if(k %in% c("kobe.p")){
-  pairwise1[[k]] =ggplot(subset(pairwise, objective==k)) + 
-    aes(x = k1, y = k2, z = value, fill = value)  + 
-    geom_tile() + 
-    
-    geom_contour(color = "white", alpha = 0.1) + 
-    scale_fill_distiller("",palette="Spectral", na.value="white", direction=1, breaks=c(0.3,0.5,0.7)) + 
-    #geom_contour(color = "white", alpha = 0.1) + 
-    #scale_fill_gradientn("",colours=myPalette(4), breaks=c(0.3,0.5,0.7))+
-    theme_bw()+facet_grid(spp~objective) +
-    theme(text = element_text(size=14),
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank(),
-          legend.position="bottom",
-          legend.key.size = unit(0.75,"line"),
-          legend.text=element_text(size=10),
-          strip.background = element_blank(),
-          strip.text.y = element_blank(),
-          axis.text.y=element_blank(),
-          axis.ticks.y=element_blank(),
-          plot.margin = unit(c(0, 0.3, 0, 0.3), "cm")) +xlab("k1")+ ylab("")#t,r,b,l
-}
-  if(k %in% c("yield")){
-    pairwise1[[k]] =ggplot(subset(pairwise, objective==k)) + 
-      aes(x = k1, y = k2, z = value, fill = value)  + 
-      geom_tile() + 
-      
-      geom_contour(color = "white", alpha = 0.1) + 
-      scale_fill_distiller("",palette="Spectral", na.value="white", direction=1) + 
-      #geom_contour(color = "white", alpha = 0.1) + 
-      #scale_fill_gradientn("",colours=myPalette(4))+
-      theme_bw()+facet_grid(spp~objective) +
-      theme(text = element_text(size=14),
-            panel.grid.major = element_blank(),
-            panel.grid.minor = element_blank(),
-            legend.position="bottom",
-            legend.key.size = unit(0.75,"line"),
-            legend.text=element_text(size=10),
-            strip.background = element_blank(),
-            strip.text.y = element_blank(),
-            axis.text.y=element_blank(),
-            axis.ticks.y=element_blank(),
-            plot.margin = unit(c(0, 0.3, 0, 0.3), "cm")) +xlab("k1")+ ylab("")
-  }
-  if(k %in% c("yieldAav")) { 
-  pairwise1[[k]] =ggplot(subset(pairwise, objective==k)) + 
-    aes(x = k1, y = k2, z = value, fill = value)  + 
-    geom_tile() + 
-    geom_contour(color = "white", alpha = 0.1) + 
-    scale_fill_distiller("",palette="Spectral", na.value="white", direction=1, breaks=c(0.9,0.95)) + 
-    #geom_contour(color = "white", alpha = 0.1) + 
-    #scale_fill_gradientn("",colours=myPalette(4), breaks=c(0.9,0.95))+
-    theme_bw()+facet_grid(spp~objective) +
-    theme(text = element_text(size=14),
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank(),
-          legend.position="bottom",
-          legend.key.size = unit(0.75,"line"),
-          legend.text=element_text(size=10),
-          strip.background = element_blank(),
-          axis.text.y=element_blank(),
-          axis.ticks.y=element_blank(),
-          plot.margin = unit(c(0, 0, 0, 0), "cm")) +xlab("k1")+ ylab("")
-  }
-}
-ggarrange(plotlist = pairwise1, ncol=4)
+minMax=function(x,na.rm=TRUE) (x-min(x,na.rm=na.rm))/diff(range(x,na.rm=na.rm))
+pairwise2=ddply(pairwise,.(spp,objective),transform, var2=minMax(value))
+
+pairwise2$spp = factor(pairwise2$spp, levels=c("ray","pollack","turbot","brill", "sprat"))
+mycol = rev(c("navy", "blue", "deepskyblue1", "deepskyblue", "yellow", "darkorange", "darkorange4"))
+pairwise2=pairwise2[!is.na(pairwise2$spp), ]
+ggplot(pairwise2) + 
+  aes(x = k1, y = k2, z = var2, fill = var2) + 
+  geom_tile() + 
+  #coord_equal() +
+  #geom_contour(color = "white", alpha = 0.5) + 
+  #scale_fill_distiller("",palette="Spectral", na.value="white", direction=1) + 
+  #geom_contour(color = "white", alpha = 0.1) + 
+  scale_fill_gradientn("PM",colours=mycol, breaks=c(0, 0.5, 1))+
+  geom_contour(color = "white", alpha = 0.3) + 
+  #scale_fill_distiller("",palette="Spectral", na.value="white", direction=1, breaks=c(0, 0.5, 1))+
+  theme_bw()+facet_grid(spp~objective) +
+  theme(text = element_text(size=18, face="bold"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        strip.background = element_blank(),
+        legend.position="bottom",panel.spacing = unit(1, "lines")
+  ) + ylab("k2")+xlab("k1")
 ```
 ## utilities
 ```{r, utilities, echo=TRUE,eval=TRUE}
@@ -182,40 +78,47 @@ ggarrange(plotlist = pairwise1, ncol=4)
 pair=reshape( pairwise, idvar = c("spp","k1","k2"), v.names = "value", timevar = "objective", 
               direction = "wide") 
 colnames(pair)[4:7] = c("safety","kobe.p","yield","yieldAav")
+pair$yieldAav=pair$yieldAav*10
+pair$s_k=apply(pair[c(4,5)],c(1),sum,na.rm=t)/2
+#pair$s_y=apply(pair[c(4,6)],c(1),sum,na.rm=t)/2
+pair$s_k_y=apply(pair[c(4:6)],c(1),sum,na.rm=t)/3
+pair$s_k_y_y=apply(pair[c(4:7)],c(1),sum,na.rm=t)/4
 
-pair$k_y=apply(pair[c(5,6)],c(1),sum,na.rm=t)/2
-pair$s_y=apply(pair[c(4,6)],c(1),sum,na.rm=t)/2
-pair$k_s_y=apply(pair[c(4:6)],c(1),sum,na.rm=t)/3
-pair$k_s_y_y=apply(pair[c(4:7)],c(1),sum,na.rm=t)/4
 
-
-pair2=melt(pair, id.vars=c("spp","k1","k2"), measure.vars=c("k_y","s_y","k_s_y","k_s_y_y"))
+pair2=melt(pair, id.vars=c("spp","k1","k2"), measure.vars=c("safety","s_k","s_k_y","s_k_y_y"))
 pair2$variable=as.character(pair2$variable)
-pair2$variable[pair2$variable=="k_y"] = "kobe/yield"
-pair2$variable[pair2$variable=="s_y"] = "safety/yield"
-pair2$variable[pair2$variable=="k_s_y"] = "kobe/safety/yield"
-pair2$variable[pair2$variable=="k_s_y_y"] = "kobe/safety/yield/yieldvar"
-minMax<-function(x,na.rm=TRUE) (x-min(x,na.rm=na.rm))/diff(range(x,na.rm=na.rm))
-te=ddply(pair2,.(variable),transform, var2=minMax(value))
+
+pair2$variable[pair2$variable=="s_k"] = "safety/kobe"
+pair2$variable[pair2$variable=="s_k_y"] = "safety/kobe/yield"
+pair2$variable[pair2$variable=="s_k_y_y"] = "safety/kobe/yield/yieldvar"
+
+te=ddply(na.omit(pair2),.(spp,variable),transform, var2=minMax(value))
+
+te$variable = factor(te$variable, levels=c("safety","safety/kobe","safety/kobe/yield","safety/kobe/yield/yieldvar"))
+te$spp = factor(te$spp, levels=c("ray","pollack","turbot","brill", "sprat"))
+
+te<- te[!is.na(te$spp), ]
 ```
 ## utilities plots
 ```{r, utilplot, echo=TRUE, fig=TRUE}
-ggplot(te) + 
+ggplot(subset(te, !(spp %in% c("lobster", "razor")))) + 
   aes(x = k1, y = k2, z = var2, fill = var2) + 
   geom_tile() + 
   #coord_equal() +
   #geom_contour(color = "white", alpha = 0.5) + 
   #scale_fill_distiller("",palette="Spectral", na.value="white", direction=1) + 
-  geom_contour(color = "white", alpha = 0.1) + 
-  scale_fill_distiller("",palette="Spectral", na.value="white", direction=1, breaks=c(0, 0.5, 1))+
-  #scale_fill_gradientn("utility",colours=myPalette(4), breaks=c(0, 0.5, 1))+
+  #geom_contour(color = "white", alpha = 0.1) + 
+  scale_fill_gradientn("utility",colours=mycol, breaks=c(0, 0.5, 1))+
+  geom_contour(color = "white", alpha = 0.3) + 
+  #scale_fill_distiller("",palette="Spectral", na.value="white", direction=1, breaks=c(0, 0.5, 1))+
   theme_bw()+facet_grid(spp~variable) +
-  theme(text = element_text(size=14),
+  theme(text = element_text(size=18, face="bold"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         strip.background = element_blank(),
         legend.position="bottom",panel.spacing = unit(1, "lines")
         ) + ylab("k2")+xlab("k1")
+
 
 #ggsave(filename='/Users/alextidd/Documents/fig6.png',last_plot(),dpi=300, units='in',width=12,height=14)
 ```
