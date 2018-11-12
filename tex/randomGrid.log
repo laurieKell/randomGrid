@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  10 NOV 2018 19:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  12 NOV 2018 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -204,15 +204,6 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 121.
 (/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 133.
-
-
-(/usr/local/texlive/2018basic/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 133.
-
 Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 [] 
  []
@@ -222,103 +213,102 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 
 {/usr/local/texlive/2018basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] [3]
-Overfull \hbox (27.1818pt too wide) in paragraph at lines 166--167
+Overfull \hbox (27.1818pt too wide) in paragraph at lines 157--158
 []\OT1/cmr/m/n/12 Life his-tory pa-ram-e-ters were ob-tained from Fish-base (ht
 tp://www.fishbase.org)
  []
 
-[4] [5] [6] [7] [8] [9]
+[4] [5] [6] [7] [8]
+Overfull \hbox (1.81404pt too wide) in paragraph at lines 313--314
+\OT1/cmr/m/n/12 mea-sures are dis-played in Fig.5. For the pro-por-tion of year
+s where $\OML/cmm/m/it/12 B=B[] >
+ []
 
-LaTeX Warning: Reference `fig:util' on page 10 undefined on input line 329.
-
-(./randomGrid.bbl [10] [11])
+[9] (./randomGrid.bbl [10] [11])
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 369.
+               Default added (so using `tbp') on input line 337.
 
 <fig1.png, id=53, 433.62pt x 216.81pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 369.
+Package pdftex.def Info: fig1.png  used on input line 337.
 (pdftex.def)             Requested size: 361.34999pt x 180.68336pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 370.
+               Default added (so using `tbp') on input line 338.
 
 <fig2.png, id=54, 578.16pt x 578.16pt>
 File: fig2.png Graphic file (type png)
 <use fig2.png>
-Package pdftex.def Info: fig2.png  used on input line 370.
+Package pdftex.def Info: fig2.png  used on input line 338.
 (pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 371.
+               Default added (so using `tbp') on input line 339.
 
 <fig3.png, id=55, 722.7pt x 578.16pt>
 File: fig3.png Graphic file (type png)
 <use fig3.png>
-Package pdftex.def Info: fig3.png  used on input line 371.
+Package pdftex.def Info: fig3.png  used on input line 339.
 (pdftex.def)             Requested size: 361.34999pt x 289.07928pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 372.
+               Default added (so using `tbp') on input line 340.
 
 <fig4.png, id=56, 433.62pt x 433.62pt>
 File: fig4.png Graphic file (type png)
 <use fig4.png>
-Package pdftex.def Info: fig4.png  used on input line 372.
+Package pdftex.def Info: fig4.png  used on input line 340.
 (pdftex.def)             Requested size: 361.34999pt x 361.36676pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 373.
+               Default added (so using `tbp') on input line 341.
 
 <fig5.png, id=57, 4818.0pt x 5420.25pt>
 File: fig5.png Graphic file (type png)
 <use fig5.png>
-Package pdftex.def Info: fig5.png  used on input line 373.
+Package pdftex.def Info: fig5.png  used on input line 341.
 (pdftex.def)             Requested size: 361.34999pt x 406.50122pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 375.
+               Default added (so using `tbp') on input line 343.
 
 <fig6.png, id=59, 4818.0pt x 5420.25pt>
 File: fig6.png Graphic file (type png)
 <use fig6.png>
-Package pdftex.def Info: fig6.png  used on input line 375.
+Package pdftex.def Info: fig6.png  used on input line 343.
 (pdftex.def)             Requested size: 361.34999pt x 406.50122pt.
 [12] [13 <./fig1.png>] [14 <./fig2.png>] [15 <./fig3.png>] [16 <./fig4.png>]
-[17 <./fig5.png>] [18 <./fig6.png>] (./randomGrid.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[17 <./fig5.png>] [18 <./fig6.png>] (./randomGrid.aux) ) 
 Here is how much of TeX's memory you used:
- 2646 strings out of 494085
- 36415 string characters out of 6163377
+ 2628 strings out of 494085
+ 36093 string characters out of 6163377
  97916 words of memory out of 5000000
- 6287 multiletter control sequences out of 15000+600000
+ 6272 multiletter control sequences out of 15000+600000
  9884 words of font info for 37 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 41i,9n,30p,1574b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mex10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/
-cmextra/cmex8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018basic/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018basic/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018basic/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018basic/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018basic/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018basi
-c/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018b
-asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
-018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on randomGrid.pdf (18 pages, 4957227 bytes).
+ 41i,9n,30p,1574b,237s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/201
+8basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive
+/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
+live/2018basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/l
+ocal/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+</usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr17.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmss8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on randomGrid.pdf (18 pages, 4956329 bytes).
 PDF statistics:
  143 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream

@@ -73,7 +73,7 @@
 
 %% Title, authors and addresses
 
-\title{Unnecessarily Complicated Research Title}
+\title{Unnecessary hyperparameter search}
 
 %% use the tnoteref command within \title for footnotes;
 %% use the tnotetext command for the associated footnote;
@@ -100,9 +100,9 @@
 %% \address[label1]{<address>}
 %% \address[label2]{<address>}
 
-\author{John Smith}
+\author{Laurie Kell}
 
-\address{California, United States}
+\address{Henstead, UK}
 
 \begin{abstract}
 %% Text of abstract
@@ -128,15 +128,6 @@ Science \sep Publication \sep Complicated
 %% main text
 \section{Introduction}
 \label{S:1}
-
-\begin{itemize}
-\item Risk and uncertainty
-\item One rule for all?
-\item Impact of life histories
-\item Comparision of constant catch v changing catch based on trends in an empirical index. 
-\item catch only - need good catch data if you havent got this how can you set catch limits
-\end{itemize}
-
 Sustainability and risks to non target exploited marine fish stock populations requires both estimates of current stock status, the effects of fishing pressure (catchability and fishing effort) and the effects of management measures on target populations, however these data are often lacking.  Subsequently there is increasing concern and a growing need for the development of innovative approaches so that management of all marine stocks not just those of high commercial value can be included into the Common Fisheries Policy (CFP \cite{european2013regulation}) framework. Under the CFP management objectives are to recover stocks and to maintain stocks within safe biological limits to levels that can produce Maximum Sustainable Yield (MSY), including by-catch species by 2015 (Implementation Plan adopted at the World Summit on Sustainable Development, Johannesburg in 2002) and no later than 2020. These conservation objectives are currently being achieved by introducing biological target (can fluctuate around targets) and limit (i.e must not be exceeded) reference points e.g. population size (stock biomass) and/or yields (catches) and/or long–term yields and fishing mortality against which the preservation of stocks within such limits are assessed. These targets or limit reference points are often referred to as harvesting strategies which include an operational component called a harvest control rule (HCR) that are based on indicators (e.g. monitoring data or models) of stock status and to prevent overfishing. 
 
 The International Council for the Exploration of the Sea (ICES) categorises stocks in to classes \emph{data-rich}, (categories 1 and 2) i.e those that have a quantitive assessment based on conventional mehods that require large amounts of data that include a long historical time series of catches and sound biological information \cite{bentley2015data}; or \emph{data-limted} \cite{costello2012status}(categories 3 and 4) (often called data poor) those without assessment, forecasts and have limited funding for research. For data-rich stocks ICES uses two types of reference points for providing fisheries advice; 
@@ -156,7 +147,7 @@ MSE methods rely on simulation testing to assess the consequences of a range of 
 
 Often empirical harvest control rules require extensive exhaustive parameter searches to tune or optimise 'hyper-parameters' (external parameters to a model) that aren’t directly learnt from estimators.  This requires a technique known as a grid search that extensively searches for all combinations of all parameters. In contrast, and some what less time consuming alternative and efficient parameter search strategies can be considered for a given range of parameter space and a known distribution.  As such a random sample can be obtained and used to perform the different experiments for parameter optimisation. 
 
-This paper describes a generic method to simulate differing life history parameters for 5 commercially important european fish species  (sprat; \emph{Sprattus pprattus}, ray; \emph{Rajidae}, pollack; \emph{Pollachius pollachius}, turbot; \emph{Psetta maxima} and brill; \emph{Scophthalmus rhombus} and to assess the performance of each empirical HCRs.  Asessment is made via a set of utility functions that indicate where ths stock is in relation to ICES limit reference points, target reference points and economics. Our approach is to show the benefits and advance management procedures by using an emprical approach for data limited stocks in comparison to a constant catch HCR strategy i.e one where catches are kept constant and low to ensure no lasting damage is done in periods of low stock productivity or whereby the stock is highly variable year on year, therefore the empirical approach can help optimise catch by setting a precautionary TAC. 
+This paper describes a generic method to simulate differing life history parameters for 5 commercially important european fish species  (sprat; \emph{Sprattus pprattus}, ray; \emph{Rajidae}, pollack; \emph{Pollachius pollachius}, turbot; \emph{Psetta maxima} and brill; \emph{Scophthalmus rhombus} and to assess the performance of each empirical HCRs.  Asessment is made via a set of utility functions that indicate where the stock is in relation to ICES limit reference points, target reference points and economics. Our approach is to show the benefits and advance management procedures by using an emprical approach for data limited stocks in comparison to a constant catch HCR strategy i.e one where catches are kept constant and low to ensure no lasting damage is done in periods of low stock productivity or whereby the stock is highly variable year on year, therefore the empirical approach can help optimise catch by setting a precautionary TAC. 
 
 
 \section{Material and Methods}
@@ -299,10 +290,14 @@ The TAC is then the average of the last TAC and the value output by the HCR.
 
 %https://stats.stackexchange.com/questions/160479/practical-hyperparameter-optimization-random-vs-grid-search
 
-When running an MSE commonly a set of MP scenarios are run to tune the MP, this requires running the MSE for each OM scenario for a range of fixed values in the HCR and then choosing the rule that best meets management objectives. If there are a lot of parameters to tune then a grid search may become unfeasible. An alternative is random search \cite{bergstra2012random} as randomly chosen trials are more efficient for parameter optimisation than trials based on a grid. The random parameter search is performed where random combinations of hyperparameters k1 and k2 are used to find the optimal solutions for the MSE model in terms of a) safety, (recruitment in relation to virgin recruitment), b) yield (catch/MSY), c) proportion of years in the kobe green zone i.e $B/B_{MSY} >1$ and $F/F_{MSY} <1$ and d) Average annual variation in a TAC from one year to the next (expressed as a proportion of the average annual catch). For instance as the process is random at each iteration its likely that the whole of the grid space would be covered in the simulation providing that there are enough iterations, there is a greater chance of finding the optimal parameter pairs. 
+When running an MSE commonly a set of MP scenarios are run to tune the MP, this requires running the MSE for each OM scenario for a range of fixed values in the HCR and then choosing the rule that best meets management objectives. If there are a lot of parameters to tune then a grid search may become unfeasible. An alternative is random search \cite{bergstra2012random} as randomly chosen trials are more efficient for parameter optimisation than trials based on a grid. The random parameter search is performed where random combinations of hyperparameters k1 and k2 are used to find the optimal solutions for the MSE model in terms of performance measures: a) safety, (recruitment in relation to virgin recruitment), b) yield (catch/MSY), c) proportion of years in the kobe green zone i.e $B/B_{MSY} > 1$ and $F/F_{MSY} < 1$ and d) Average annual variation in a TAC from one year to the next (expressed as a proportion of the average annual catch). For instance as the process is random at each iteration its likely that the whole of the grid space would be covered in the simulation providing that there are enough iterations, there is a greater chance of finding the optimal parameter pairs. 
 
 %For example any distribution over a sample space with a finite maximum, the maximum of 60 random observations lies within the top 5\% of the true maximum, with 95\% probability.  Imagine the 5\% interval around the true maximum. Now imagine that we sample points from his space and see if any of it lands within that maximum. Each random draw has a 5\% chance of landing in that interval, if we draw n points independently, then the probability that all of them miss the desired interval is (1−0.05)n So the probability that at least one of them succeeds in hitting the interval is 1 minus that quantity. We want at least a .95 probability of success. To figure out the number of draws we need, just solve for n in the equation: 1−(1−0.05)^n>0.95 We get n⩾60
   
+\subsubsection{Utility function}
+Utility is based on economic theory and as such a decision-maker is faced with making a choice among a number of alternative options, obtaining differing levels of utility from each alternative option, and tending to choose one that maximizes utility. To evaluate the HCRs from the range of performance measures described above it is possible to collectivelty group the measures to suit different stakeholders and/or objectives. Here we provide visual isopleths as decision support tools to show the net benefit of making one decision over another with the inclusion of the sources of uncertainty with the objective of showing where where the stock is in relation to ICES limit reference points, target reference points and economics.
+
+
 \section{Results}
 
 Results from our simulated life histories illustrate the diversity in relation to growth, size and maturity and are presented in Fig.1. These plots show that for fast growing species which are small in size $l_{\infty}$ (asymtopic length parameter - maximum attainable length) species such as sprat, the growth parameter \textit{k} is high. There are also inherent relationships between length at maturity and the maximum attainable length. For instance sprats length-at-50\%-maturity \textit{l50} are low, in contrast to a slower growing larger species $l_{\infty}$ such as ray or pollack.
@@ -311,31 +306,14 @@ Observations in Fig.2 shows the resulting trends of the vectors from the OM for 
 
 Fig.3 displays the equilibrium relationships of the OM. Comparisons of reference points estimates can be made across species.  The \textit{m/k} plot shows interesting trends with lower values for sprat where the growth rate \textit{k} is considerably higher than the natural mortality rate \textit{m} with little uncertainty around the estimate. In contrast to a slower growing species such as pollack where natural mortality is higher, as is the uncertainty around the estimate. The aforementioned relationships when compared with the proxy for fishing pressure \textit{f/m} show that the estimate is considerably higher in sprat than pollack. 
 
-The intrinsinc population growth rate \textit{r} shows that sprats reproductive capacity is higher than all of the species. However the long term average biomass (if fishing at \textit{fmsy}) to deliver MSY \textit{bmsy} is slighty less in comparison to all other species although has a higher MSY. Nevertheless the catch size relative to the stock size \textit{fmsy} is > 1 thus suggesting overfishing. 
+The intrinsinc population growth rate \textit{r} shows that sprats reproductive capacity is higher than all of the species. However the long term average biomass (if fishing at \textit{fmsy}) to deliver MSY \textit{bmsy} is slighty less in comparison to all other species although has a higher MSY. Nevertheless the catch size relative to the stock size \textit{fmsy} is $>$ 1 thus suggesting this species is susceptible to overfishing. 
+
+The dynamics of the forward projection to go from equilibrium (Fig.3) to time series dynamics are presented in Fig.4. As an example we show that by changing the fishing mortality \textit{F} time series so that it represents a time series where the stock was originally lightly exploited and then increase \textit{F} until the stock was overfished, and show by reducing fishing to ensure spawning stock biomass was greater than \textit{bmsy}.
+
+The outputs from the MSE and hyperparameters relative to performance measures are displayed in Fig.5. For the proportion of years where $B/B_{MSY} > 1$ and $F/F_{MSY} < 1$ here represented by "kobe.p it is evident that if the desired objective is to increase the proportion of years of staying in the kobe green zone then the hyperparameter k1 must be increased while k2 must be decreasesd for all species. Observations for safety (recruitment relative to virgin recruitment) expectedly show the same patterns as for kobe.p. In contrast, for yield it is has an opposite trend especially pronounced for brill and ray, i.e by decreasing k1 and increasing k2 the yield would increase. While for sprat, turbot and pollack the relationship is particularly different in that the dynamics are highly variable, more so for sprat.  Turbot and pollack show similar relationships whereby keeping k2 high solely increases yield and that k1 has very little effect when the parameter is decreased/increased. In contrast sprats isopleths depict that the best yields are obtained when k2 are at 25\% when k1 is at zero or both k1 and k2 are at 100\%.
 
 
 
-
-\textbf{[EXAMPLES TO BE UPDATED]}
-\begin{itemize}
-\item Figure \ref{fig:fig1} shows the life history parameters
-\item Figure \ref{fig:fig2} shows the vectors
-\item Figure \ref{fig:fig3} shows the time series relative to reference points
-%\item Figure \ref{fig:pm} shows the performance statistics; points are
-\begin{enumerate}
- \item ~
- \item ~
- \item ~
- \item ~\item Figure \ref{fig:util} shows the utility functions for the seven study stocks points area
-\end{enumerate}
-\begin{enumerate}
- \item ~
- \item ~
- \item ~
- \item ~
-\end{enumerate}
-
-\end{itemize}
 
 \section{Discussion}
 
@@ -346,18 +324,8 @@ The main ICES MSY objectives for category 3 and 4 stocks are to maximise long-te
 %Further exploration of alternative advice rules, weightings of individual components within a generic advice rule, time-lags in data, and selection of amount of historical data to use, would be useful for identifying a suite of advice rules that perform well under the various fishery conditions of the ICES category 3 & 4 stocks.
 
 
-\begin{itemize}
-\item Bullet point one
-\item Bullet point two
-\end{itemize}
-
 \section{Conclusions}
 
-
-\begin{itemize}
-\item Bullet point one
-\item Bullet point two
-\end{itemize}
 
 \section{References}
 
