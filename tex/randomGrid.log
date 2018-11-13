@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  13 NOV 2018 13:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  13 NOV 2018 14:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -234,84 +234,811 @@ File: fig1.png Graphic file (type png)
 <use fig1.png>
 Package pdftex.def Info: fig1.png  used on input line 337.
 (pdftex.def)             Requested size: 361.34999pt x 180.68336pt.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 338.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-<fig2.png, id=76, 578.16pt x 578.16pt>
-File: fig2.png Graphic file (type png)
-<use fig2.png>
-Package pdftex.def Info: fig2.png  used on input line 338.
-(pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 339.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-<fig3.png, id=77, 722.7pt x 578.16pt>
-File: fig3.png Graphic file (type png)
-<use fig3.png>
-Package pdftex.def Info: fig3.png  used on input line 339.
-(pdftex.def)             Requested size: 361.34999pt x 289.07928pt.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 340.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-<fig4.png, id=78, 433.62pt x 433.62pt>
-File: fig4.png Graphic file (type png)
-<use fig4.png>
-Package pdftex.def Info: fig4.png  used on input line 340.
-(pdftex.def)             Requested size: 361.34999pt x 361.36676pt.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 341.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-<fig5.png, id=79, 4818.0pt x 5420.25pt>
-File: fig5.png Graphic file (type png)
-<use fig5.png>
-Package pdftex.def Info: fig5.png  used on input line 341.
-(pdftex.def)             Requested size: 361.34999pt x 406.50122pt.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 342.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-<fig6.png, id=81, 4818.0pt x 5420.25pt>
-File: fig6.png Graphic file (type png)
-<use fig6.png>
-Package pdftex.def Info: fig6.png  used on input line 342.
-(pdftex.def)             Requested size: 361.34999pt x 406.50122pt.
-[19 <./fig1.png>] [20 <./fig2.png>] [21 <./fig3.png>] [22 <./fig4.png>]
-[23 <./fig5.png>] [24 <./fig6.png>] (./randomGrid.aux) ) 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \csname\endcsname 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \MessageBreak 
+l.337 ...aphics[width=5in]{fig1.png}\label\caption
+                                                  {}{fig:fig1}\end{figure}
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 2657 strings out of 494085
- 36859 string characters out of 6163377
- 97591 words of memory out of 5000000
- 6301 multiletter control sequences out of 15000+600000
+ 2626 strings out of 494085
+ 36570 string characters out of 6163377
+ 97537 words of memory out of 5000000
+ 6277 multiletter control sequences out of 15000+600000
  9884 words of font info for 37 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 41i,9n,30p,1683b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/201
-8basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive
-/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
-live/2018basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/l
-ocal/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
-</usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.p
-fb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr17.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmss8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on randomGrid.pdf (24 pages, 4961240 bytes).
-PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41i,9n,35p,1683b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+!  ==> Fatal error occurred, no output PDF file produced!
