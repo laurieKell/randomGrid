@@ -1,7 +1,16 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{25}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Frid et~al.(2006)Frid, Paramor, and
+  Scott}]{doi:10.1016/j.icesjms.2006.03.028}
+\bibinfo{author}{C.~L. Frid}, \bibinfo{author}{O.~A. Paramor},
+  \bibinfo{author}{C.~L. Scott},
+\newblock \bibinfo{title}{Ecosystem-based management of fisheries: is science
+  limiting?},
+\newblock \bibinfo{journal}{ICES Journal of Marine Science}
+  \bibinfo{volume}{63} (\bibinfo{year}{2006}) \bibinfo{pages}{1567--1572}.
 %Type = Article
 \bibitem[{Commission(2013)}]{european2013regulation}
 \bibinfo{author}{E.~Commission},
@@ -10,6 +19,16 @@
   policy, amending council regulations (ec) no 1954/2003 and (ec) no 1224/2009,
   and repealing council regulations (ec) no 2371/2002 and (ec) no 639/2004, and
   council decision 2004/585/ec}  (\bibinfo{year}{2013}).
+%Type = Article
+\bibitem[{Summit(2002)}]{summit2002world}
+\bibinfo{author}{J.~Summit},
+\newblock \bibinfo{title}{World summit on sustainable development},
+\newblock \bibinfo{journal}{Johannesburg, South Africa}
+  (\bibinfo{year}{2002}).
+%Type = Misc
+\bibitem[{FAO(2003)}]{fao2003world}
+\bibinfo{author}{FAO}, \bibinfo{title}{World summit on sustainable development
+  2002 and its implications for fisheries}, \bibinfo{year}{2003}.
 %Type = Article
 \bibitem[{Bentley(2015)}]{bentley2015data}
 \bibinfo{author}{N.~Bentley},
@@ -68,6 +87,39 @@
 \newblock \bibinfo{journal}{ICES Journal of Marine Science}
   \bibinfo{volume}{70} (\bibinfo{year}{2013}) \bibinfo{pages}{694--706}.
 %Type = Article
+\bibitem[{Blanchard et~al.(2014)Blanchard, Andersen, Scott, Hintzen, Piet, and
+  Jennings}]{blanchard2014evaluating}
+\bibinfo{author}{J.~L. Blanchard}, \bibinfo{author}{K.~H. Andersen},
+  \bibinfo{author}{F.~Scott}, \bibinfo{author}{N.~T. Hintzen},
+  \bibinfo{author}{G.~Piet}, \bibinfo{author}{S.~Jennings},
+\newblock \bibinfo{title}{Evaluating targets and trade-offs among fisheries and
+  conservation objectives using a multispecies size spectrum model},
+\newblock \bibinfo{journal}{Journal of Applied Ecology} \bibinfo{volume}{51}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{612--622}.
+%Type = Article
+\bibitem[{Smith et~al.(2011)Smith, Brown, Bulman, Fulton, Johnson, Kaplan,
+  Lozano-Montes, Mackinson, Marzloff, Shannon et~al.}]{smith2011impacts}
+\bibinfo{author}{A.~D. Smith}, \bibinfo{author}{C.~J. Brown},
+  \bibinfo{author}{C.~M. Bulman}, \bibinfo{author}{E.~A. Fulton},
+  \bibinfo{author}{P.~Johnson}, \bibinfo{author}{I.~C. Kaplan},
+  \bibinfo{author}{H.~Lozano-Montes}, \bibinfo{author}{S.~Mackinson},
+  \bibinfo{author}{M.~Marzloff}, \bibinfo{author}{L.~J. Shannon}, et~al.,
+\newblock \bibinfo{title}{Impacts of fishing low--trophic level species on
+  marine ecosystems},
+\newblock \bibinfo{journal}{Science} \bibinfo{volume}{333}
+  (\bibinfo{year}{2011}) \bibinfo{pages}{1147--1150}.
+%Type = Article
+\bibitem[{Plag{\'a}nyi et~al.(2013)Plag{\'a}nyi, van Putten, Hutton, Deng,
+  Dennis, Pascoe, Skewes, and Campbell}]{plaganyi2013integrating}
+\bibinfo{author}{{\'E}.~E. Plag{\'a}nyi}, \bibinfo{author}{I.~van Putten},
+  \bibinfo{author}{T.~Hutton}, \bibinfo{author}{R.~A. Deng},
+  \bibinfo{author}{D.~Dennis}, \bibinfo{author}{S.~Pascoe},
+  \bibinfo{author}{T.~Skewes}, \bibinfo{author}{R.~A. Campbell},
+\newblock \bibinfo{title}{Integrating indigenous livelihood and lifestyle
+  objectives in managing a natural resource},
+\newblock \bibinfo{journal}{Proceedings of the National Academy of Sciences}
+  \bibinfo{volume}{110} (\bibinfo{year}{2013}) \bibinfo{pages}{3639--3644}.
+%Type = Article
 \bibitem[{Kell et~al.(2007)Kell, Mosqueira, Grosjean, Fromentin, Garcia,
   Hillary, Jardim, Mardle, Pastoors, Poos et~al.}]{kell2007flr}
 \bibinfo{author}{L.~Kell}, \bibinfo{author}{I.~Mosqueira},
@@ -79,6 +131,19 @@
   and development of management strategies},
 \newblock \bibinfo{journal}{ICES J. Mar. Sci.} \bibinfo{volume}{64}
   (\bibinfo{year}{2007}) \bibinfo{pages}{640}.
+%Type = Article
+\bibitem[{Punt and editor: Emory~Anderson(2015)}]{punt2015strategic}
+\bibinfo{author}{A.~E. Punt}, \bibinfo{author}{H.~editor: Emory~Anderson},
+\newblock \bibinfo{title}{Strategic management decision-making in a complex
+  world: quantifying, understanding, and using trade-offs},
+\newblock \bibinfo{journal}{ICES Journal of Marine Science}
+  \bibinfo{volume}{74} (\bibinfo{year}{2015}) \bibinfo{pages}{499--510}.
+%Type = Article
+\bibitem[{Bergstra and Bengio(2012)}]{bergstra2012random}
+\bibinfo{author}{J.~Bergstra}, \bibinfo{author}{Y.~Bengio},
+\newblock \bibinfo{title}{Random search for hyper-parameter optimization},
+\newblock \bibinfo{journal}{Journal of Machine Learning Research}
+  \bibinfo{volume}{13} (\bibinfo{year}{2012}) \bibinfo{pages}{281--305}.
 %Type = Article
 \bibitem[{Sissenwine and Shepherd(1987)}]{sissenwine1987alternative}
 \bibinfo{author}{M.~Sissenwine}, \bibinfo{author}{J.~Shepherd},
@@ -122,10 +187,24 @@
   management act. {NOAA} Tech Memo {NMFS-F/SPO-40}}, pp.
   \bibinfo{pages}{34--45}.
 %Type = Article
-\bibitem[{Bergstra and Bengio(2012)}]{bergstra2012random}
-\bibinfo{author}{J.~Bergstra}, \bibinfo{author}{Y.~Bengio},
-\newblock \bibinfo{title}{Random search for hyper-parameter optimization},
-\newblock \bibinfo{journal}{Journal of Machine Learning Research}
-  \bibinfo{volume}{13} (\bibinfo{year}{2012}) \bibinfo{pages}{281--305}.
+\bibitem[{Rindorf et~al.(2017)Rindorf, Dichmont, Thorson, Charles, Clausen,
+  Degnbol, Garcia, Hintzen, Kempf, Levin et~al.}]{rindorf2017inclusion}
+\bibinfo{author}{A.~Rindorf}, \bibinfo{author}{C.~M. Dichmont},
+  \bibinfo{author}{J.~Thorson}, \bibinfo{author}{A.~Charles},
+  \bibinfo{author}{L.~W. Clausen}, \bibinfo{author}{P.~Degnbol},
+  \bibinfo{author}{D.~Garcia}, \bibinfo{author}{N.~T. Hintzen},
+  \bibinfo{author}{A.~Kempf}, \bibinfo{author}{P.~Levin}, et~al.,
+\newblock \bibinfo{title}{Inclusion of ecological, economic, social, and
+  institutional considerations when setting targets and limits for multispecies
+  fisheries},
+\newblock \bibinfo{journal}{ICES Journal of Marine Science}
+  \bibinfo{volume}{74} (\bibinfo{year}{2017}) \bibinfo{pages}{453--463}.
+%Type = Article
+\bibitem[{Geromont and Butterworth(2014)}]{geromont2014generic}
+\bibinfo{author}{H.~Geromont}, \bibinfo{author}{D.~Butterworth},
+\newblock \bibinfo{title}{Generic management procedures for data-poor
+  fisheries: forecasting with few data},
+\newblock \bibinfo{journal}{ICES J. Mar. Sci.}  (\bibinfo{year}{2014})
+  \bibinfo{pages}{fst232}.
 
 \end{thebibliography}
