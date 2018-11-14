@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{38}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
@@ -61,6 +61,14 @@
   fisheries},
 \newblock \bibinfo{journal}{Science}  (\bibinfo{year}{2012})
   \bibinfo{pages}{1224768}.
+%Type = Article
+\bibitem[{Garcia(1995)}]{garcia1995precautionary}
+\bibinfo{author}{S.~Garcia},
+\newblock \bibinfo{title}{The precautionary approach to fisheries and its
+  implications for fishery research, technology and management: an updated
+  review},
+\newblock \bibinfo{journal}{FAO Technical Paper} \bibinfo{volume}{350}
+  (\bibinfo{year}{1995}).
 %Type = Book
 \bibitem[{Quinn and Deriso(1999)}]{quinn1999quantitative}
 \bibinfo{author}{T.~J. Quinn}, \bibinfo{author}{R.~B. Deriso},
@@ -179,6 +187,81 @@
 \newblock \bibinfo{title}{Quantitative laws in metabolism and growth},
 \newblock \bibinfo{journal}{Quarterly Review of Biology}
   (\bibinfo{year}{1957}) \bibinfo{pages}{217--231}.
+%Type = Article
+\bibitem[{Gislason et~al.(2010)Gislason, Daan, Rice, and
+  Pope}]{gislason2010does}
+\bibinfo{author}{H.~Gislason}, \bibinfo{author}{N.~Daan},
+  \bibinfo{author}{J.~Rice}, \bibinfo{author}{J.~Pope},
+\newblock \bibinfo{title}{Does natural mortality depend on individual size},
+\newblock \bibinfo{journal}{Fish and Fisheries} \bibinfo{volume}{11}
+  (\bibinfo{year}{2010}) \bibinfo{pages}{149--158}.
+%Type = Article
+\bibitem[{Lorenzen and Enberg(2002)}]{lorenzen2002density}
+\bibinfo{author}{K.~Lorenzen}, \bibinfo{author}{K.~Enberg},
+\newblock \bibinfo{title}{Density-dependent growth as a key mechanism in the
+  regulation of fish populations: evidence from among-population comparisons},
+\newblock \bibinfo{journal}{Proceedings of the Royal Society of London. Series
+  B: Biological Sciences} \bibinfo{volume}{269} (\bibinfo{year}{2002})
+  \bibinfo{pages}{49--54}.
+%Type = Inproceedings
+\bibitem[{Haist(1997)}]{haist1997integrated}
+\bibinfo{author}{V.~Haist},
+\newblock \bibinfo{title}{Integrated catch-age mark-recapture model:
+  Application to bc sablefish stocks.},
+\newblock in: \bibinfo{booktitle}{Int. Symp. on Fishery Stock Assessment Models
+  for the 21st Century, Anchorage, Alaska, EEUU. 8-11 Oct 1997.}
+%Type = Article
+\bibitem[{Pine et~al.(2003)Pine, Pollock, Hightower, Kwak, and
+  Rice}]{pine2003review}
+\bibinfo{author}{W.~E. Pine}, \bibinfo{author}{K.~H. Pollock},
+  \bibinfo{author}{J.~E. Hightower}, \bibinfo{author}{T.~J. Kwak},
+  \bibinfo{author}{J.~A. Rice},
+\newblock \bibinfo{title}{A review of tagging methods for estimating fish
+  population size and components of mortality},
+\newblock \bibinfo{journal}{Fisheries} \bibinfo{volume}{28}
+  (\bibinfo{year}{2003}) \bibinfo{pages}{10--23}.
+%Type = Article
+\bibitem[{Jensen(1985)}]{jensen1985comparison}
+\bibinfo{author}{A.~Jensen},
+\newblock \bibinfo{title}{Comparison of catch-curve methods for estimation of
+  mortality},
+\newblock \bibinfo{journal}{Transactions of the American Fisheries Society}
+  \bibinfo{volume}{114} (\bibinfo{year}{1985}) \bibinfo{pages}{743--747}.
+%Type = Article
+\bibitem[{Griffiths and Harrod(2007)}]{griffiths2007natural}
+\bibinfo{author}{D.~Griffiths}, \bibinfo{author}{C.~Harrod},
+\newblock \bibinfo{title}{Natural mortality, growth parameters, and
+  environmental temperature in fishes revisited},
+\newblock \bibinfo{journal}{Canadian Journal of Fisheries and Aquatic Sciences}
+  \bibinfo{volume}{64} (\bibinfo{year}{2007}) \bibinfo{pages}{249--255}.
+%Type = Article
+\bibitem[{Gunderson and Dygert(1988)}]{gunderson1988reproductive}
+\bibinfo{author}{D.~R. Gunderson}, \bibinfo{author}{P.~H. Dygert},
+\newblock \bibinfo{title}{Reproductive effort as a predictor of natural
+  mortality rate},
+\newblock \bibinfo{journal}{ICES Journal of Marine Science}
+  \bibinfo{volume}{44} (\bibinfo{year}{1988}) \bibinfo{pages}{200--209}.
+%Type = Article
+\bibitem[{Hoenig(1983)}]{hoenig1983empirical}
+\bibinfo{author}{J.~M. Hoenig},
+\newblock \bibinfo{title}{Empirical use of longevity data to estimate mortality
+  rates},
+\newblock \bibinfo{journal}{Fishery Bulletin} \bibinfo{volume}{82}
+  (\bibinfo{year}{1983}) \bibinfo{pages}{898--903}.
+%Type = Article
+\bibitem[{Gunderson(1980)}]{gunderson1980using}
+\bibinfo{author}{D.~R. Gunderson},
+\newblock \bibinfo{title}{Using rk selection theory to predict natural
+  mortality},
+\newblock \bibinfo{journal}{Canadian Journal of Fisheries and Aquatic Sciences}
+  \bibinfo{volume}{37} (\bibinfo{year}{1980}) \bibinfo{pages}{2266--2271}.
+%Type = Article
+\bibitem[{Hewitt and Hoenig(2005)}]{hewitt2005comparison}
+\bibinfo{author}{D.~A. Hewitt}, \bibinfo{author}{J.~M. Hoenig},
+\newblock \bibinfo{title}{Comparison of two approaches for estimating natural
+  mortality based on longevity},
+\newblock \bibinfo{journal}{Fishery Bulletin} \bibinfo{volume}{103}
+  (\bibinfo{year}{2005}) \bibinfo{pages}{433--437}.
 %Type = Book
 \bibitem[{Beverton and Holt(1993)}]{beverton1993dynamics}
 \bibinfo{author}{R.~Beverton}, \bibinfo{author}{S.~Holt}, \bibinfo{title}{On

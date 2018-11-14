@@ -131,14 +131,14 @@ Science \sep Publication \sep Complicated
 
 Ensuring sustainability across ecological, social and economic dimensions is a cornerstone of international Sustainable Development policy (United Nations Sustainable Development Goals) and Blue Growth initiatives \cite{burgess2016five}.  However, at least 33\% of commercial fish stocks worldwide are being fished at unsustainable levels \cite{food2018state}.  A key chanllenge is how can we rigorously evaluate multifaceted aspects of sustainability and effectively anticipate and avoid risk. It is globally recognised that to improve sustainability a more hollistic approach is required so that management of all marine stocks not just those of high commercial value can be included into policy frameworks. Often appropriate data on non target (by-catch) species are lacking \cite{doi:10.1016/j.icesjms.2006.03.028} both to estimates stock status, the effects of fishing effort and the effects of management measures on these populations.
 
-Under the European Unions Common Fisheries Policy (CFP); \cite{european2013regulation}), management objectives are to recover stocks and to maintain stocks within safe biological limits to levels that can produce Maximum Sustainable Yield (MSY - the largest yield that can be taken from a stock over an indefinite period), including by-catch species by 2015 (Implementation Plan adopted at the World Summit on Sustainable Development, Johannesburg in 2002) and no later than 2020 \cite{summit2002world} \cite{fao2003world}.  
+Under the European Unions Common Fisheries Policy (CFP); \cite{european2013regulation}, management objectives are to recover stocks and to maintain stocks within safe biological limits to levels that can produce Maximum Sustainable Yield (MSY - the largest yield that can be taken from a stock over an indefinite period), including by-catch species by 2015 (Implementation Plan adopted at the World Summit on Sustainable Development, Johannesburg in 2002) and no later than 2020 \cite{summit2002world} \cite{fao2003world}.  
 
 These conservation objectives are currently being achieved by introducing biological target (e.g. can fluctuate around targets) and limit (i.e must not be exceeded) reference points e.g. population size (stock biomass) and/or yields (e.g. management of fish stocks under the CFP based on a target exploitation rate achieved by Total Allowable Catch (TAC) management) and/or long–term yields and fishing mortality against which the preservation of stocks within such limits are assessed. These targets or limit reference points are often referred to as harvesting strategies which include an operational component called a harvest control rule (HCR) that are based on indicators (e.g. monitoring data or models) of stock status and to prevent target, growth and recruitment overfishing. Therefore to achieve MSY requires limit as well as target reference points.
 
 The International Council for the Exploration of the Sea (ICES) categorises stocks in to classes \emph{data-rich}, (categories 1 and 2) i.e those that have a quantitive assessment based on conventional mehods that require large amounts of data that include a long historical time series of catches and sound biological information \cite{bentley2015data}; or \emph{data-limted} \cite{costello2012status}(categories 3 and 4) (often called data poor) those without assessment, forecasts and have limited funding for research. For data-rich stocks ICES uses two types of reference points for providing fisheries advice; 
 
 \begin{enumerate}
-  \item Precautionary Approach (PA) reference points (those relating to stock status and exploitation relative to precautionary objectives) and 
+  \item Precautionary Approach (PA) \cite{garcia1995precautionary} reference points (those relating to stock status and exploitation relative to precautionary objectives) and 
   \item MSY reference points (those relating to achieving MSY) 
 \end{enumerate}
 
@@ -152,7 +152,7 @@ MSE methods rely on simulation testing to assess the consequences of a range of 
 
 Often empirical harvest control rules require extensive exhaustive parameter searches to tune or optimise 'hyper-parameters' (external parameters to a model) that aren’t directly learnt from estimators.  This requires a technique known as a grid search that extensively searches for all combinations of all parameters. In contrast, and some what less time consuming alternative and efficient parameter search strategies can be considered for a given range of parameter space and a known distribution.  As such a random sample can be obtained and used to perform the different experiments for parameter optimisation \cite{bergstra2012random}. 
 
-This paper describes a generic method to simulate differing life history parameters for 5 commercially important european fish species  (sprat; \emph{Sprattus pprattus}, ray; \emph{Rajidae}, pollack; \emph{Pollachius pollachius}, turbot; \emph{Psetta maxima} and brill; \emph{Scophthalmus rhombus} and to simulation test the performance of each empirical HCRs.  Asessment is made via a set of utility functions that indicate where the stock is in relation to ICES limit reference points (probability of avoiding limits), target reference points (probability of achieving targets, recovery and long-term) and economics(MSY and variability in yield). Our approach is to show the benefits and advance management procedures by using an emprical approach for data limited stocks in comparison to a constant catch HCR strategy i.e one where catches are kept constant and low to ensure no lasting damage is done in periods of low stock productivity or whereby the stock is highly variable year on year, therefore the empirical approach can help optimise catch by setting a precautionary TAC. 
+This paper describes a generic method to simulate differing life history parameters for 5 commercially important european fish species  (sprat; \emph{Sprattus pprattus}, ray; \emph{Rajidae}, pollack; \emph{Pollachius pollachius}, turbot; \emph{Psetta maxima} and brill; \emph{Scophthalmus rhombus} and to simulation test the performance of each empirical HCRs.  Asessment is made via a set of utility functions that indicate where the stock is in relation to ICES limit reference points (probability of avoiding limits), target reference points (probability of achieving targets, recovery and long-term) and economics  (MSY and variability in yield). Our approach is to show the benefits and advance management procedures by using an emprical approach for data limited stocks in comparison to a constant catch HCR strategy i.e one where catches are kept constant and low to ensure no lasting damage is done in periods of low stock productivity or whereby the stock is highly variable year on year, therefore the empirical approach can help optimise catch by setting a precautionary TAC. 
 
 
 \section{Material and Methods}
@@ -161,8 +161,7 @@ This paper describes a generic method to simulate differing life history paramet
 
 Life history parameters were obtained from Fishbase (http://www.fishbase.org) for growth, natural mortality and maturity were used to develop an age-based Operating Model. To do this the parameters were first used to parameterise functional forms for mass ($W$), proportion mature ($Q$), natural mortality ($M$) and fishing mortality ($F$) at age. These were then used to calculate the  spawner ($S/R$) and yield-per-recruit ($Y/R$) which were then combined with a stock recruitment relationship \cite{sissenwine1987alternative} to calculate the equilibrium stock size as a function of fishing mortality ($F$). 
 
-This analysis allows a variety of reference points such as those based on Maximum Sustainable Yield ($MSY$), i.e. $B_{MSY}$ the spawning stock biomass ($S$) and $F_{MSY}$ the fishing mortality that produces $MSY$ at equilibrium to be estimated. Other reference points are $F_{0.1}$ the fishing mortality on the yield per recruit curve where the slope is 10\% of that at the origin, a conservative proxy for $F_{MSY}$; and
-$F_{Crash}$ which is the fishing mortality that will drive the stock to extinction since it is equivalent to a $R/S$ greater than the slope at the origin of the stock recruitment relationship, i.e. recruitment can not replace removals for a fishing mortality equal to $F_{Crash}$.  
+This analysis allows a variety of reference points such as those based on Maximum Sustainable Yield ($MSY$), i.e. $B_{MSY}$ the spawning stock biomass ($S$) and $F_{MSY}$ the fishing mortality that produces $MSY$ at equilibrium to be estimated. Other reference points are $F_{0.1}$ the fishing mortality on the yield per recruit curve where the slope is 10\% of that at the origin, a conservative proxy for $F_{MSY}$; and $F_{Crash}$ which is the fishing mortality that will drive the stock to extinction since it is equivalent to a $R/S$ greater than the slope at the origin of the stock recruitment relationship, i.e. recruitment can not replace removals for a fishing mortality equal to $F_{Crash}$.  
 
 The equilibrium relationships can then be turned into a forward dynamic model and projected forward.
 
@@ -197,6 +196,13 @@ f(x) = \left\{ \begin{array}{ll}
 		\end{array}
        \right.
 \end{equation}
+
+Natural Mortality
+
+Natural mortality of exploited fish populations is often assumed to be a species-specific constant independent of body size. This assumption has important implications for size-based fish population models and for predicting the outcome of size-dependent fisheries management measures such as mesh-size regulations \cite{gislason2010does}. Direct estimates of the instantaneous natural mortality made in controlled studies, however, are shown to vary by age \cite{lorenzen2002density}. Although $M$ can sometimes be estimated within an assessment model for example where data from tagging provide information independent of fishing mortality rates \cite{haist1997integrated}; \cite{pine2003review} in most cases $M$ is derived from a variety of life history relationships, e.g. based on size \cite{jensen1985comparison}; \cite{griffiths2007natural}; \cite{gunderson1988reproductive}; \cite{hoenig1983empirical}; \cite{gunderson1980using}; \cite{hewitt2005comparison}. The large and ever increasing literature on this subject is a reflection of the uncertainty. \cite{gislason2010does} in an emprirical study showed that $M$ is significantly related to body length, asymptotic length and k. Temperature is non-significant when $k$ is included, since $k$ itself is correlated with temperature, i.e.
+\begin{equation}
+            M =  0.55L^{1.61}L_\infty^{1.44}k
+\end{equation} 
 
 Selection Pattern
 
@@ -332,12 +338,12 @@ The main ICES MSY objectives for category 3 and 4 stocks are to maximise long-te
 \section{Conclusions}
 
 
-\section{References}
+
 
 \bibliography{/Users/alextidd/Documents/RandomGrid/tex/refs.bib} 
 \bibliographystyle{model1-num-names}
 
-\section{Figures}
+
 
 \begin{figure}[]\centering\includegraphics[width=5in]{fig1.png}\caption{}\label{fig:fig1}\end{figure}
 \begin{figure}[]\centering\includegraphics[width=5in]{fig2.png}\caption{}\label{fig:fig2}\end{figure}
