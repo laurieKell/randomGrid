@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  14 NOV 2018 11:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.1)  14 NOV 2018 13:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -213,82 +213,82 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 
 {/usr/local/texlive/2018basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] [3] [4]
-Overfull \hbox (27.1818pt too wide) in paragraph at lines 157--158
+Overfull \hbox (27.1818pt too wide) in paragraph at lines 162--163
 []\OT1/cmr/m/n/12 Life his-tory pa-ram-e-ters were ob-tained from Fish-base (ht
 tp://www.fishbase.org)
  []
 
-[5] [6] [7] [8] [9] [10] [11] [12]
-Overfull \hbox (1.81404pt too wide) in paragraph at lines 313--314
+[5] [6] [7] [8] [9] [10] [11] [12] [13]
+Overfull \hbox (1.81404pt too wide) in paragraph at lines 318--319
 \OT1/cmr/m/n/12 mea-sures are dis-played in Fig.5. For the pro-por-tion of year
 s where $\OML/cmm/m/it/12 B=B[] >
  []
 
-[13] [14] (./randomGrid.bbl [15] [16] [17] [18])
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 337.
-
-<fig1.png, id=75, 433.62pt x 216.81pt>
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 337.
-(pdftex.def)             Requested size: 361.34999pt x 180.68336pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 338.
-
-<fig2.png, id=76, 578.16pt x 578.16pt>
-File: fig2.png Graphic file (type png)
-<use fig2.png>
-Package pdftex.def Info: fig2.png  used on input line 338.
-(pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 339.
-
-<fig3.png, id=77, 722.7pt x 578.16pt>
-File: fig3.png Graphic file (type png)
-<use fig3.png>
-Package pdftex.def Info: fig3.png  used on input line 339.
-(pdftex.def)             Requested size: 361.34999pt x 289.07928pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 340.
-
-<fig4.png, id=78, 433.62pt x 433.62pt>
-File: fig4.png Graphic file (type png)
-<use fig4.png>
-Package pdftex.def Info: fig4.png  used on input line 340.
-(pdftex.def)             Requested size: 361.34999pt x 361.36676pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 341.
-
-<fig5.png, id=79, 4818.0pt x 5420.25pt>
-File: fig5.png Graphic file (type png)
-<use fig5.png>
-Package pdftex.def Info: fig5.png  used on input line 341.
-(pdftex.def)             Requested size: 361.34999pt x 406.50122pt.
+[14] (./randomGrid.bbl [15] [16] [17] [18])
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 342.
 
+<fig1.png, id=75, 433.62pt x 216.81pt>
+File: fig1.png Graphic file (type png)
+<use fig1.png>
+Package pdftex.def Info: fig1.png  used on input line 342.
+(pdftex.def)             Requested size: 361.34999pt x 180.68336pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 343.
+
+<fig2.png, id=76, 578.16pt x 578.16pt>
+File: fig2.png Graphic file (type png)
+<use fig2.png>
+Package pdftex.def Info: fig2.png  used on input line 343.
+(pdftex.def)             Requested size: 361.34999pt x 361.3491pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 344.
+
+<fig3.png, id=77, 722.7pt x 578.16pt>
+File: fig3.png Graphic file (type png)
+<use fig3.png>
+Package pdftex.def Info: fig3.png  used on input line 344.
+(pdftex.def)             Requested size: 361.34999pt x 289.07928pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 345.
+
+<fig4.png, id=78, 433.62pt x 433.62pt>
+File: fig4.png Graphic file (type png)
+<use fig4.png>
+Package pdftex.def Info: fig4.png  used on input line 345.
+(pdftex.def)             Requested size: 361.34999pt x 361.36676pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 346.
+
+<fig5.png, id=79, 4818.0pt x 5420.25pt>
+File: fig5.png Graphic file (type png)
+<use fig5.png>
+Package pdftex.def Info: fig5.png  used on input line 346.
+(pdftex.def)             Requested size: 361.34999pt x 406.50122pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 347.
+
 <fig6.png, id=81, 4818.0pt x 5420.25pt>
 File: fig6.png Graphic file (type png)
 <use fig6.png>
-Package pdftex.def Info: fig6.png  used on input line 342.
+Package pdftex.def Info: fig6.png  used on input line 347.
 (pdftex.def)             Requested size: 361.34999pt x 406.50122pt.
-[19 <./fig1.png>] [20 <./fig2.png>] [21 <./fig3.png>] [22 <./fig4.png>]
-[23 <./fig5.png>] [24 <./fig6.png>] (./randomGrid.aux) ) 
+[19] [20 <./fig1.png>] [21 <./fig2.png>] [22 <./fig3.png>] [23 <./fig4.png>]
+[24 <./fig5.png>] [25 <./fig6.png>] (./randomGrid.aux) ) 
 Here is how much of TeX's memory you used:
- 2657 strings out of 494085
- 36859 string characters out of 6163377
- 97591 words of memory out of 5000000
- 6301 multiletter control sequences out of 15000+600000
+ 2663 strings out of 494085
+ 36991 string characters out of 6163377
+ 96747 words of memory out of 5000000
+ 6307 multiletter control sequences out of 15000+600000
  9884 words of font info for 37 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 41i,9n,30p,1813b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,30p,1324b,263s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/201
 8basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive
 /2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
@@ -308,10 +308,10 @@ lic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti12.pfb>
-Output written on randomGrid.pdf (24 pages, 4961565 bytes).
+Output written on randomGrid.pdf (25 pages, 4962897 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 167 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

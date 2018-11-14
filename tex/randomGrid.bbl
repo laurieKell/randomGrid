@@ -1,7 +1,22 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{27}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Burgess et~al.(2016)Burgess, Clemence, McDermott, Costello, and
+  Gaines}]{burgess2016five}
+\bibinfo{author}{M.~G. Burgess}, \bibinfo{author}{M.~Clemence},
+  \bibinfo{author}{G.~R. McDermott}, \bibinfo{author}{C.~Costello},
+  \bibinfo{author}{S.~D. Gaines},
+\newblock \bibinfo{title}{Five rules for pragmatic blue growth},
+\newblock \bibinfo{journal}{Marine Policy}  (\bibinfo{year}{2016}).
+%Type = Book
+\bibitem[{Food and of~the United Nations.
+  Fisheries~Department(2018)}]{food2018state}
+\bibinfo{author}{Food}, \bibinfo{author}{A.~O. of~the United Nations.
+  Fisheries~Department}, \bibinfo{title}{The state of world fisheries and
+  aquaculture}, \bibinfo{publisher}{Food and Agriculture Organization of the
+  United Nations}, \bibinfo{year}{2018}.
 %Type = Article
 \bibitem[{Frid et~al.(2006)Frid, Paramor, and
   Scott}]{doi:10.1016/j.icesjms.2006.03.028}
