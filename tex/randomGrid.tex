@@ -73,7 +73,7 @@
 
 %% Title, authors and addresses
 
-\title{Unnecessary hyperparameter search}
+\title{Optimsing empirical harvest control rules via a random parameter search; A data-poor case study}
 
 %% use the tnoteref command within \title for footnotes;
 %% use the tnotetext command for the associated footnote;
@@ -100,7 +100,7 @@
 %% \address[label1]{<address>}
 %% \address[label2]{<address>}
 
-\author{Laurie Kell}
+\author{Prof. Laurie Kell}
 
 \address{Henstead, UK}
 
@@ -196,6 +196,7 @@ f(x) = \left\{ \begin{array}{ll}
 		\end{array}
        \right.
 \end{equation}
+
 
 Natural Mortality
 
@@ -321,9 +322,10 @@ The intrinsinc population growth rate \textit{r} shows that sprats reproductive 
 
 The dynamics of the forward projection to go from equilibrium (Fig.3) to time series dynamics are presented in Fig.4. As an example we show that by changing the fishing mortality \textit{F} time series so that it represents a time series where the stock was originally lightly exploited and then increase \textit{F} until the stock was overfished, and show by reducing fishing pressure to ensure spawning stock biomass was greater than \textit{bmsy}.
 
-The outputs from the MSE and hyperparameters relative to performance measures are displayed in Fig.5. For the proportion of years where $B/B_{MSY} > 1$ and $F/F_{MSY} < 1$ here represented by "kobe.p it is evident that if the desired objective is to increase the proportion of years of staying in the kobe green zone then the value of the hyperparameter k1 must be increased conversely k2 must be of a lower value for all species. Observations for safety (recruitment relative to virgin recruitment) expectedly show the same patterns as for kobe.p. In contrast, for yield the trend is opposite for brill and ray, i.e by decreasing k1 and ensuring k2 is of a high value the yield would increase. While for sprat, turbot and pollack the relationship is particularly different in that the dynamics are highly variable, more so for sprat.  Turbot and pollack show similar relationships whereby maintaing k2 with a high value increases yield and that k1 has very little effect what value it is when the parameter is either decreased/increased. In contrast sprats isopleths depict that the best yields are obtained when k2 are at 25\% when k1 is at zero or both k1 and k2 are at 100\%. The variable representing variation in year on year yield, YieldAav, shows that if k1 is reduced to a ~50\% and k2  reduced <25\% the variability in catch is at it lowest. 
+The outputs from the MSE and hyperparameters relative to performance measures were rescaled by species, measure and are displayed in Fig.5. For the proportion of years where $B/B_{MSY} > 1$ and $F/F_{MSY} < 1$ here represented by "kobe.p" it is evident that if the desired objective is to increase the proportion of years of staying in the kobe green zone then the value of the hyperparameter k1 must be increased conversely k2 must be of a lower value for all species. Observations for safety (recruitment relative to virgin recruitment) expectedly show the same patterns as for kobe.p. In contrast, for yield the trend is opposite for all species, i.e by decreasing k1 and ensuring k2 is of a high value the yield would increase. While for sprat, the relationship is particularly different in that the isopleths depict that the best yields are obtained when k2 are at 25\% when k1 is at zero. The variable representing variation in year on year yield, YieldAav, shows that if k1 and k2 are reduced to 0 the variability in catch is at it lowest. 
 
-To indicate specific trade-offs when combining performance measures utility functions were considered primarily on the basis of meeting ICES limit reference points, target reference points and economics:  
+Fig.6 shows that when combining performance measures a utility function can be derived to indicate how the different components could potentially meet the objectives, i.e. ICES limit reference points, target reference points and in terms of economics. Given that the performance measures are on the same scale it is thus possible to interpret the combined utilities.  It can be clearly seen that to achieve managements goals in terms of limit reference points i.e safety, hyper-parameter k1 should be increased and k2 decreased.  Meeting both target and limit reference points i.e safety and kobe.p requires similar values of k1 and k2 as mentioned previously when solely observing safety. 
+
 
 
 \section{Discussion}
