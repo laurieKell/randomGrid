@@ -7,20 +7,30 @@ output: pdf_document
 
 
 ```{r, libs}
-library(reshape)
 library(plyr)
-library(tinytex)
-#library(dplyr)
-
+library(dplyr)
+library(reshape)
+library(broom)
 library(ggpubr)
+library(ggpmisc)
 library(mgcv)
-library(knitr)
 library(RColorBrewer)
+library(RPostgreSQL)
+
 ```
 
 
 ```{r, data}
-load("/Users/alextidd/Dropbox/mydas/results/empd-results2.RData")
+drv =dbDriver("PostgreSQL")
+#laurie db
+con=dbConnect(drv,
+              host ='wklife.csrzweaa3tbm.eu-west-2.rds.amazonaws.com',
+              dbname  ='wklife',
+              port    =5432,
+              user    ='mydas',
+              password='Yes_Meski')
+
+empd_pm=dbGetQuery(con, "select * from randgridpm")
 ```
 
 ```{r,blockimage,echo=TRUE,eval=TRUE}
@@ -35,11 +45,11 @@ test=melt(empd_pm, id.vars=c("spp","k1","k2"),measure.vars=c("safety","kobe.p","
 pairwise = list()
 for (i in c("safety","kobe.p","yield","yieldAav")){
   for (j in c("brill","turbot","ray","pollack","sprat")){
-    a    = subset(test, spp==j & variable==i)
-    spl1 = gam(value ~ s(k1, k2, bs = 'sos'), data = a)
+    a    = subset(test, spp==j & variable %in% c(i))
+    spl1 <- gam(value ~ s(k1, k2, bs = 'sos'), data = a)
     # fine grid, coarser is faster
-    datmat2 <- data.frame(expand.grid(k1 = seq(0, 1, 0.05), k2= seq(0, 1, 0.05)))
-    resp = predict(spl1, datmat2, type = "response")
+    datmat2 <- data.frame(expand.grid(k1 = seq(0, 1, 0.01), k2= seq(0, 1, 0.01)))
+    resp <- predict(spl1, datmat2, type = "response")
     datmat2$value <- resp
     datmat2$spp = j
     datmat2$objective = i
