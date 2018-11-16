@@ -2,7 +2,7 @@
 title: "Random Grid Results"
 author: "Alex Tidd"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: pdf_document
+output: html_document
 ---
 
 
@@ -37,16 +37,22 @@ empd_pm=dbGetQuery(con, "select * from randgridpm")
 empd_pm$kobe.p=empd_pm$kobe.n/45
 empd_pm$yieldAav = pmin(0.5,empd_pm$yieldAav)
 empd_pm$yieldAav = 1 - empd_pm$yieldAav
-test=melt(empd_pm, id.vars=c("spp","k1","k2"),measure.vars=c("safety","kobe.p","yield","yieldAav"))
+test=melt(empd_pm, id.vars=c("spp","k1","k2","iter","j"),measure.vars=c("safety","kobe.p","yield","yieldAav"))[,c("spp","k1","k2","iter","value","variable")]
 ```
 
 ## modelled display using GAM
 ```{r, modelloop, echo=TRUE,eval=TRUE}
 pairwise = list()
 for (i in c("safety","kobe.p","yield","yieldAav")){
+<<<<<<< HEAD
   for (j in c("brill","turbot","ray","pollack","sprat")){
     a    = subset(test, spp==j & variable %in% c(i))
     spl1 <- gam(value ~ s(k1, k2, bs = 'sos'), data = a)
+=======
+  for (j in c("brill","turbot","ray","pollack","sprat")[4]){
+    a    = subset(test, spp==j & variable==i)[,c("k1","k2","value")]
+    spl1 = gam(value ~ s(k1, k2, bs = 'sos'), data = a)
+>>>>>>> 020de6f14437757d6d9ad779412cbb3950a9c7da
     # fine grid, coarser is faster
     datmat2 <- data.frame(expand.grid(k1 = seq(0, 1, 0.01), k2= seq(0, 1, 0.01)))
     resp <- predict(spl1, datmat2, type = "response")
